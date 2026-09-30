@@ -16,13 +16,13 @@
 title: Ιστοχώρος προβολής πολιτιστικού περιεχομένου.
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ο ιστοχώρος αυτός αναπτύχτηκε από τους ........................
-  στα πλαίσια εργασίας του μαθήματος ............................
-  του ΠΜΣ .................. του Ιονίου Πανεπιστημίου.
+  Ο ιστοχώρος αυτός αναπτύχτηκε από τον Φώτη Καρακεχαγιά
+  στα πλαίσια εργασίας του μαθήματος Εργαλεία Προβολής Τουριστικού Προιόντος
+  του ΠΜΣ Ψηφιακές Εφαρμογές και Καινοτομία του Ιονίου Πανεπιστημίου.
 baseurl: "heritage-promotion" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  riggas-ionio/heritage-promotion
+github_username:  FotsKar96
 
 # Build settings
 markdown: kramdown
