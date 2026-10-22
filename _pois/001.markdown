@@ -1,7 +1,29 @@
 ---
 layout: poi
-wikidatum: Q121378
-title:  Κέρκυρα
+title: "Καταρράκτες Έδεσσας"
+wikidatum: Q50809609
+permalink: /katarraktes/edessa/
+order: 1
+area: "Πέλλα"
+description: "Καταρράκτες Έδεσσας στην περιοχή Πέλλα, με χάρτη, εικόνα και πηγές."
+# image: /assets/images/edessa.jpg
 ---
 
-Sample text
+## Το νερό μέσα στην πόλη
+Οι καταρράκτες της Έδεσσας συνδέουν το φυσικό τοπίο με τον αστικό χώρο. Ο Κάρανος αποτελεί μέρος του συμπλέγματος που παρουσιάζουμε εδώ ως ένα σημείο.
+
+## Πριν από την επίσκεψη
+Για την τρέχουσα πρόσβαση και τους επισκέψιμους χώρους
+συμβουλευτείτε την ενημέρωση του αρμόδιου τοπικού φορέα.
+Η πινέζα εντοπίζει το αξιοθέατο και δεν ορίζει αφετηρία διαδρομής.
+
+## Πηγές και εικόνα
+- [Αφετηρία τοπικής ή επίσημης τεκμηρίωσης](https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall)
+- [Wikidata](https://www.wikidata.org/wiki/Q50809609)
+- [Ελληνική Wikipedia](https://el.wikipedia.org/wiki/Καταρράκτες_Έδεσσας)
+
+Φωτογραφία: Ευαγγελία Κατή.
+[Σελίδα αρχείου Commons](https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg).
+Άδεια ή σήμανση: Public domain.
+
+Έλεγχος πηγών της ομάδας: 22 Οκτωμβρίου 2026
