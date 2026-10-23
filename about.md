@@ -1,30 +1,31 @@
 ---
 layout: page
-title: Σχετικά
+title: "Πηγές και μεθοδολογία"
 permalink: /about/
 ---
+## Η επιλογή των σημείων
 
-Εκτός από blog posts μπορείτε να έχετε και permanent pages, τα αρχεία από τα οποία παράγονται αυτές βρίσκονται στο root φακελο του ιστοτόπου
-αλλά μπορούν στο front matter τους να δηλώνουν σε ποιο permanent link αντιστοιχούν.  
-Παράδειγμα μιας permanent page αποτελεί η τρέχουσα σελίδα η οποία περιγράφει λίγα στοιχεία για το theme _minima_ στο οποίο βασίζεται αυτός ο ιστότοπος.
+Ο ιστότοπος οργανώνει μια επιλογή δέκα καταρρακτών και
+συμπλεγμάτων καταρρακτών με κοινό θέμα το νερό και το τοπίο.
 
-**_ToDo_ σας**:  
+## Τα δεδομένα
 
-- Δημιουργήστε μια ακόμη permanent page η οποία να αναφέρει τα μέλη της ομάδας σας.  
-Η page να έχει όνομα αρχείου `team.md` και να αντιστοιχεί στο permanent link `/team/`
+Χρησιμοποιούμε Wikidata για δομημένα στοιχεία,
+Wikipedia για συνδεδεμένα εγκυκλοπαιδικά λήμματα
+και Wikimedia Commons για εικόνες με τους αντίστοιχους όρους.
+Οι συγκεκριμένες πηγές και οι δημιουργοί αναφέρονται
+στη σελίδα κάθε σημείου.
 
----
+## Η δική μας δουλειά
 
+Επιλέγουμε τα σημεία, ερευνούμε και συνθέτουμε περιεχόμενο
+για τον επισκέπτη. Καταγράφουμε τις πραγματικές προσθήκες
+και διορθώσεις μας στα έργα Wikimedia.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Το τεχνικό πρότυπο
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Βασιζόμαστε στο πρότυπο του μαθήματος:
+[heritage-promotion](https://github.com/riggas-ionio/heritage-promotion).
+Οι σελίδες παράγονται με Jekyll και δημοσιεύονται στο GitHub Pages.
+Ο παρεχόμενος μηχανισμός άντλησης δεδομένων αποτελεί
+τη βάση για τις προσαρμογές της ομάδας μας.
