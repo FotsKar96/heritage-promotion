@@ -1,5 +1,5 @@
 ---
-layout: waterfalls-map
+layout: waterfalls_map
 title: "Χάρτης των καταρρακτών"
 permalink: /map/
 description: "Η επιλεγμένη δεκάδα καταρρακτών της Ελλάδας στον χάρτη."
