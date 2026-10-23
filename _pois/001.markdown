@@ -6,7 +6,7 @@ permalink: /katarraktes/edessa/
 order: 1
 area: "Πέλλα"
 description: "Καταρράκτες Έδεσσας στην περιοχή Πέλλα, με χάρτη, εικόνα και πηγές."
-# image: /assets/images/edessa.jpg
+image: /assets/images/edessa.jpg
 ---
 
 ## Το νερό μέσα στην πόλη
