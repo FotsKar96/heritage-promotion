@@ -16,6 +16,7 @@ collections:
 header_pages:
   - index.md
   - pois.md
+  - map.md
   - prin-tin-episkepsi.md
   - team.md
   - about.md
