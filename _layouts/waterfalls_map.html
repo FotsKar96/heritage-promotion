@@ -1,0 +1,22 @@
+---
+layout: default
+load_leaflet: 1
+---
+<h1>{{ page.title | escape }}</h1>
+{{ content }}
+<p id="waterfall-map-status">Φόρτωση σημείων...</p>
+<div id="waterfall-map" style="height:480px;width:100%"></div>
+<script>
+window.waterfallPoints = [
+{% assign points = site.pois | sort: 'order' %}
+{% for p in points %}
+  {
+    qid: {{ p.wikidatum | jsonify }},
+    title: {{ p.title | jsonify }},
+    url: {{ p.url | relative_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+</script>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+<script src="{{ '/assets/js/waterfall-map.js' | relative_url }}"></script>
