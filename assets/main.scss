@@ -1,0 +1,21 @@
+---
+---
+@import "minima";
+
+body { background:#f4f8f5; color:#22332e; }
+.site-header { background:#f4f8f5; border-top:4px solid #285f50; }
+.site-title, .site-title:visited { color:#285f50; font-weight:700; }
+a, a:visited { color:#176b83; }
+a:hover { color:#285f50; text-decoration:underline; }
+.site-nav .page-link { color:#285f50; }
+h1, h2, h3 { color:#234d41; }
+.waterfall-page h1 { font-size:2rem; line-height:1.2; }
+.waterfall-page img { display:block; margin:12px 0; border-radius:8px; }
+.waterfall-page img[hidden] { display:none; }
+#map, #waterfall-map { border-radius:8px; margin:16px 0; }
+.site-footer { background:#edf3ef; }
+@media screen and (max-width:600px) {
+  .wrapper { padding-left:18px; padding-right:18px; }
+  .site-nav { background:#f4f8f5; }
+  .waterfall-page h1 { font-size:1.6rem; }
+}
