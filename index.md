@@ -12,9 +12,27 @@ description: "Εξερευνήστε δέκα επιλεγμένους κατα�
     <a class="waterfall-button waterfall-button-secondary" href="{{ '/map/' | relative_url }}">Εξερευνήστε τον χάρτη</a>
   </div>
   <figure class="waterfall-hero-photo">
-    <img src="{{ '/assets/images/edessa.jpg' | relative_url }}" alt="Ο καταρράκτης της Έδεσσας ανάμεσα σε βράχια και πυκνή βλάστηση" width="960" height="720" fetchpriority="high" decoding="async">
-    <figcaption>Έδεσσα · Φωτογραφία: Ευαγγελία Κατή · <a href="https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons — Public domain</a></figcaption>
-  </figure>
+  <img
+    src="{{ '/assets/images/drymona-home.jpg' | relative_url }}"
+    alt="Ο καταρράκτης της Δρυμώνας Ευβοίας και η φυσική λιμνούλα ανάμεσα σε βράχια και βλάστηση"
+    width="1280"
+    height="785"
+    fetchpriority="high"
+    decoding="async">
+
+  <figcaption>
+    Δρυμώνα Ευβοίας · Φωτογραφία: Jebulon ·
+    <a
+      href="https://commons.wikimedia.org/wiki/File:Drymona_water_fall_and_pool_north_Euboea_Greece.jpg"
+      target="_blank"
+      rel="noopener noreferrer">Wikimedia Commons</a>
+    ·
+    <a
+      href="https://creativecommons.org/publicdomain/zero/1.0/"
+      target="_blank"
+      rel="noopener noreferrer">CC0</a>
+  </figcaption>
+</figure>
 </section>
 
 <section class="waterfall-home-about" aria-labelledby="waterfall-home-about-title">
