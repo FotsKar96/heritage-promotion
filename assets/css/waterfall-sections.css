@@ -1,0 +1,89 @@
+/* Scoped additions: welcome section and waterfall information cards. */
+.waterfall-home, .waterfall-detail { --waterfall-green:#285f50; --waterfall-ink:#22332e; --waterfall-soft:#e8f0eb; --waterfall-line:#cbdcd2; }
+.waterfall-home *, .waterfall-detail * { box-sizing:border-box; }
+.waterfall-home { max-width:1280px; margin:0 auto; }
+.waterfall-home .waterfall-eyebrow, .waterfall-detail .waterfall-eyebrow { color:#496d60; font-size:.82rem; font-weight:700; letter-spacing:.07em; margin:0 0 10px; }
+.waterfall-welcome { text-align:center; }
+.waterfall-home .waterfall-welcome h1 { max-width:1050px; margin:0 auto 16px; font-size:clamp(2rem,4vw,3.25rem); font-weight:700; line-height:1.15; letter-spacing:-.025em; color:#234d41; }
+.waterfall-welcome-intro { max-width:740px; margin:0 auto 22px; font-size:1.12rem; line-height:1.7; }
+.waterfall-actions { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:0 0 28px; }
+.waterfall-home a.waterfall-button { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:11px 22px; border:1px solid var(--waterfall-green); border-radius:8px; background:var(--waterfall-green); color:#fff; font-size:1rem; font-weight:600; line-height:1.4; text-decoration:none; }
+.waterfall-home a.waterfall-button:hover { background:#204d41; border-color:#204d41; color:#fff; }
+.waterfall-home a.waterfall-button-secondary { background:transparent; color:var(--waterfall-green); }
+.waterfall-home a.waterfall-button-secondary:hover { background:var(--waterfall-soft); color:#204d41; }
+.waterfall-hero-photo { margin:0; }
+.waterfall-hero-photo img { display:block; width:100%; height:clamp(240px,34vw,430px); object-fit:cover; object-position:50% 52%; border-radius:14px; background:var(--waterfall-soft); }
+.waterfall-hero-photo figcaption { margin-top:9px; color:#4b6258; font-size:.78rem; line-height:1.6; }
+.waterfall-home-about { max-width:850px; margin:42px auto 30px; }
+.waterfall-home-about h2 { font-size:1.7rem; line-height:1.3; margin-bottom:18px; }
+.waterfall-home-about p { font-size:1rem; line-height:1.8; }
+.waterfall-home-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin:30px 0 24px; }
+.waterfall-home a.waterfall-home-link { display:flex; flex-direction:column; gap:9px; padding:24px; min-width:0; border:1px solid var(--waterfall-line); border-radius:12px; background:#fff; color:var(--waterfall-ink); text-decoration:none; transition:box-shadow .15s ease,border-color .15s ease; }
+.waterfall-home a.waterfall-home-link:hover { border-color:#6d9a86; box-shadow:0 6px 18px #234d4110; }
+.waterfall-link-label { color:#496d60; font-size:.8rem; font-weight:600; }
+.waterfall-home-link strong { font-size:1.15rem; color:#234d41; }
+.waterfall-home-link > span:not(.waterfall-link-label):not(.waterfall-link-arrow) { font-size:.93rem; line-height:1.6; }
+.waterfall-link-arrow { color:var(--waterfall-green); font-size:1.35rem; margin-top:auto; align-self:flex-end; }
+.waterfall-home-note { max-width:850px; margin:24px auto 0; text-align:center; color:#4b6258; font-size:.88rem; line-height:1.7; }
+.waterfall-home a:focus-visible, .waterfall-detail a:focus-visible { outline:3px solid #176b83; outline-offset:4px; border-radius:3px; }
+.waterfall-detail { max-width:1280px; margin:0 auto; }
+.waterfall-back-link { margin-bottom:18px; font-size:.9rem; }
+.waterfall-page.waterfall-detail > h1 { margin:0 auto 14px; max-width:1050px; font-size:clamp(1.8rem,3.2vw,2.6rem); line-height:1.2; font-weight:700; }
+.waterfall-detail-intro { max-width:850px; margin:0 auto 28px; text-align:center; line-height:1.7; color:#496157; }
+.waterfall-overview { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(310px,1fr); align-items:start; gap:24px; }
+.waterfall-detail .waterfall-detail-photo { display:flex; align-items:center; justify-content:center; min-width:0; min-height:290px; margin:0; border:1px solid var(--waterfall-line); border-radius:12px; overflow:hidden; background:var(--waterfall-soft); }
+.waterfall-detail .waterfall-detail-photo img { display:block; width:100%; max-width:100%; height:auto; max-height:650px; object-fit:contain; margin:0; border-radius:0; }
+.waterfall-detail .waterfall-detail-photo img[hidden] { display:none; }
+.waterfall-photo-fallback { max-width:360px; margin:0; padding:30px; text-align:center; font-size:.95rem; color:#496157; }
+.waterfall-detail-photo img:not([hidden]) ~ .waterfall-photo-fallback { display:none; }
+.waterfall-facts { min-width:0; border:1px solid var(--waterfall-line); border-top:4px solid var(--waterfall-green); border-radius:12px; background:#fff; padding:24px; }
+.waterfall-detail .waterfall-facts .waterfall-eyebrow { text-align:center; font-size:.75rem; }
+.waterfall-detail .waterfall-facts h2 { margin:0 0 20px; font-size:1.5rem; line-height:1.3; color:#234d41; }
+.waterfall-fact-list { margin:0; }
+.waterfall-fact { border-bottom:1px solid #e3ebe6; padding:12px 0; }
+.waterfall-fact:first-child { padding-top:0; }
+.waterfall-fact:last-child { border-bottom:0; }
+.waterfall-fact dt { font-size:.78rem; font-weight:700; color:#496d60; margin-bottom:4px; }
+.waterfall-fact dd { margin:0; color:var(--waterfall-ink); font-size:.98rem; line-height:1.55; overflow-wrap:anywhere; }
+.waterfall-height-value { display:block; font-size:1.8rem; font-weight:700; color:var(--waterfall-green); line-height:1.25; margin:4px 0 6px; }
+.waterfall-height-unknown { display:block; font-weight:600; font-size:.95rem; margin:4px 0 6px; }
+.waterfall-fact-note { display:block; font-size:.8rem; color:#496157; line-height:1.6; }
+.waterfall-fact-sources { margin-top:16px; padding-top:14px; border-top:1px solid #e3ebe6; font-size:.8rem; line-height:1.6; }
+.waterfall-fact-sources p { margin:0 0 4px; color:#496157; }
+.waterfall-fact-sources ul { margin:0; list-style:none; padding:0; }
+.waterfall-fact-sources li { margin:0; }
+.waterfall-height-explanation { margin:14px 0 12px; font-size:.75rem; line-height:1.6; color:#536a5f; }
+.waterfall-fact-map-link { display:inline-block; font-size:.9rem; font-weight:600; padding:5px 0; }
+.waterfall-wikipedia-link { text-align:center; margin:22px 0; }
+.waterfall-wikipedia-link:has(a[hidden]) { display:none; }
+.waterfall-map-section { margin-top:34px; scroll-margin-top:24px; }
+.waterfall-map-section h2 { font-size:1.55rem; }
+.waterfall-detail-content { max-width:900px; margin:34px auto 0; line-height:1.8; }
+.waterfall-detail-content h2 { margin-top:30px; font-size:1.55rem; line-height:1.35; }
+.waterfall-detail-content a { overflow-wrap:anywhere; }
+@media (max-width:800px) {
+  .waterfall-overview { grid-template-columns:1fr; gap:20px; }
+  .waterfall-facts { padding:22px; }
+  .waterfall-detail .waterfall-detail-photo { min-height:220px; }
+  .waterfall-detail .waterfall-detail-photo img { max-height:520px; }
+  .waterfall-home-links { gap:12px; }
+  .waterfall-home a.waterfall-home-link { padding:18px; }
+}
+@media (max-width:600px) {
+  .waterfall-home .waterfall-eyebrow { font-size:.7rem; letter-spacing:.035em; }
+  .waterfall-welcome-intro { font-size:1rem; line-height:1.65; }
+  .waterfall-actions { flex-direction:column; gap:10px; margin-bottom:22px; }
+  .waterfall-home a.waterfall-button { width:100%; padding:12px 16px; }
+  .waterfall-hero-photo img { height:270px; object-position:50% 52%; border-radius:10px; }
+  .waterfall-hero-photo figcaption { font-size:.72rem; }
+  .waterfall-home-about { margin-top:30px; }
+  .waterfall-home-about h2 { font-size:1.45rem; }
+  .waterfall-home-links { grid-template-columns:1fr; gap:12px; }
+  .waterfall-home a.waterfall-home-link { padding:20px; gap:7px; }
+  .waterfall-home-note { font-size:.82rem; }
+  .waterfall-facts { padding:20px; }
+  .waterfall-detail-intro { font-size:.95rem; margin-bottom:22px; }
+  .waterfall-detail .waterfall-detail-photo { min-height:190px; }
+  .waterfall-detail-content { font-size:.97rem; }
+}
+@media (prefers-reduced-motion:reduce) { .waterfall-home a.waterfall-home-link { transition:none; } }
