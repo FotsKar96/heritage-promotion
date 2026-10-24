@@ -1,0 +1,104 @@
+# Τα ύψη αφορούν τις πτώσεις που κατονομάζονται στις σημειώσεις.
+# Δεν είναι επιτόπιες μετρήσεις, υψόμετρα ή αθροίσματα συμπλεγμάτων.
+# Έλεγχος των παρακάτω πηγών: 24 Οκτωβρίου 2026.
+# null σημαίνει ότι δεν έχει διασταυρωθεί αριθμητική τιμή για το σημείο.
+
+Q50809609:
+  name: "Καταρράκτες Έδεσσας"
+  height: "70 μ."
+  height_note: "Αφορά τον Κάρανο, όχι το άθροισμα των καταρρακτών της Έδεσσας."
+  landscape: "Καταρράκτες μέσα στο αστικό τοπίο"
+  interest: "Η διαδρομή θέασης του Κάρανου περιλαμβάνει σημείο πίσω από την υδάτινη κουρτίνα."
+  sources:
+    - label: "Edessa Guide — Κάρανος"
+      url: "https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall"
+
+Q96143730:
+  name: "Καταρράκτες της Δρυμώνας"
+  height: "10 μ."
+  height_note: "Η μεγαλύτερη πτώση όπως αναφέρεται στη σελίδα του ΕΟΤ."
+  landscape: "Μικρό φαράγγι με καταρράκτες και λιμνούλες"
+  interest: "Ο ποταμός Σηπιάς δημιουργεί τρεις καταρράκτες. Η ροή είναι περιορισμένη στην καρδιά του καλοκαιριού."
+  sources:
+    - label: "Visit Greece / ΕΟΤ — Δρυμώνας"
+      url: "https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls"
+
+Q16329450:
+  name: "Πολυλίμνιο Μεσσηνίας"
+  height: "Περίπου 25 μ."
+  height_note: "Αφορά την Καδούλα μέσα στο σύμπλεγμα, όχι ενιαίο ύψος όλου του Πολυλιμνίου."
+  landscape: "Σύμπλεγμα φυσικών λιμνών και καταρρακτών"
+  interest: "Κοντά στη Χαραυγή, οι λίμνες συνδέονται μεταξύ τους με ρέμα και μικρές πτώσεις νερού."
+  sources:
+    - label: "Visit Greece / ΕΟΤ — Πολυλίμνιο"
+      url: "https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia"
+
+Q105529431:
+  name: "Καταρράκτης Μαν Κάτσα"
+  height: "Περίπου 15 μ."
+  height_note: "Το ύψος του γκρεμού από τον οποίο πέφτει το νερό, σύμφωνα με το Visit Lesvos."
+  landscape: "Ρέμα και μικρή φυσική λίμνη σε ηφαιστειακά πετρώματα"
+  interest: "Ο Ασπροπόταμος συναντά πετρώματα ιγνιμβρίτη που συνδέονται με την ηφαιστειακή ιστορία της Λέσβου."
+  sources:
+    - label: "Visit Lesvos — Μαν Κάτσα"
+      url: "https://www.visitlesvos.gr/pois/man-katsa-waterfall/"
+
+Q109562646:
+  name: "Καταρράκτης Λειβαδίτη"
+  height: "Περίπου 60 μ."
+  height_note: "Η κατακόρυφη πτώση όπως περιγράφεται από τον Δήμο Ξάνθης."
+  landscape: "Δασικό τοπίο με κατακόρυφη πτώση νερού"
+  interest: "Είναι γνωστός και ως καταρράκτης Τραχωνίου. Τον χειμώνα μπορεί να παγώσει."
+  sources:
+    - label: "Δήμος Ξάνθης — Λειβαδίτης / Τραχώνι"
+      url: "https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou"
+
+Q123279956:
+  name: "Καταρράκτης Νέδας"
+  height: null
+  height_note: "Δεν έχει διασταυρωθεί αριθμητική τιμή για τον συγκεκριμένο καταρράκτη της καταχώρισης."
+  landscape: "Καταρράκτης στο ποτάμιο τοπίο της Νέδας"
+  interest: "Η καταχώριση αφορά ένα σημείο του ποταμού και όχι ολόκληρη τη διαδρομή του φαραγγιού."
+  sources:
+    - label: "Visit Peloponnese — Νέδα"
+      url: "https://visitpeloponnese.com/el/prdct/neda-apokosmi-empeiria-apo-faraggi-stoys-katarraktes"
+
+Q123279134:
+  name: "Καταρράκτης Φονιά"
+  height: null
+  height_note: "Δεν αποδίδεται εδώ ύψος άλλης πτώσης του ίδιου ρέματος στο συγκεκριμένο σημείο."
+  landscape: "Ρέμα με καταρράκτες και βάθρες"
+  interest: "Οι βάθρες είναι φυσικές λιμνούλες που διαμορφώνονται ανάμεσα στα βράχια."
+  sources:
+    - label: "Περιφέρεια ΑΜΘ — Βάθρες Φονιά"
+      url: "https://www.emtgreece.com/el/proorismos/bathresfonias-gria-bathra"
+
+Q123280515:
+  name: "Καταρράκτης Μυλωνά"
+  height: "20 μ."
+  height_note: "Η τιμή που δημοσιεύει ο Δήμος Ιεράπετρας για τον καταρράκτη στο φαράγγι Μυλωνά."
+  landscape: "Καταρράκτης σε φαράγγι της ανατολικής Κρήτης"
+  interest: "Το φαράγγι συνδέει την περιοχή του Αγίου Ιωάννη με την παραλία Κακιά Σκάλα."
+  sources:
+    - label: "Δήμος Ιεράπετρας — Φαράγγι Μυλωνά"
+      url: "https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon"
+
+Q134572270:
+  name: "Καταρράκτης Βαλανάρη"
+  height: "6 μ."
+  height_note: "Το ύψος που αναφέρει ο Δήμος Ραφήνας–Πικερμίου."
+  landscape: "Καταρράκτης στο ρέμα Βαλανάρη, στο Ντράφι"
+  interest: "Με λιγότερη ροή εμφανίζονται δύο δίδυμες πτώσεις. Η μορφή του αλλάζει ανάλογα με τις βροχές."
+  sources:
+    - label: "Δήμος Ραφήνας–Πικερμίου — Βαλανάρης"
+      url: "https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/"
+
+Q134580916:
+  name: "Καταρράκτες Πυθάρας"
+  height: null
+  height_note: "Ο Δήμος Άνδρου περιγράφει μικρούς καταρράκτες χωρίς αριθμητικό ύψος πτώσης."
+  landscape: "Καταπράσινη ρεματιά με μικρούς καταρράκτες και λιμνούλες"
+  interest: "Τα νερά της χρησιμοποιούνταν παλιότερα για τη λειτουργία της Φάμπρικας, του νερόμυλου στις Στενιές."
+  sources:
+    - label: "Δήμος Άνδρου — Πυθάρα"
+      url: "https://andros.gr/gr/component/content/article.html?id=51:axiotheata"

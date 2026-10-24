@@ -8,13 +8,18 @@ search: false
 {%- assign first_search_document = true -%}
 {%- for document in search_documents -%}
   {%- if document.title and document.search != false and document.published != false and document.url != '/404.html' -%}
+    {%- assign facts = site.data.waterfall_facts[document.wikidatum] -%}
+    {%- capture indexed_content -%}
+      {{ document.content | markdownify | strip_html }}
+      {{ facts.height }} {{ facts.height_note }} {{ facts.landscape }} {{ facts.interest }}
+    {%- endcapture -%}
     {%- unless first_search_document -%},{%- endunless -%}
     {
       "title": {{ document.title | jsonify }},
       "url": {{ document.url | relative_url | jsonify }},
       "area": {{ document.area | default: '' | jsonify }},
       "description": {{ document.description | default: '' | jsonify }},
-      "content": {{ document.content | markdownify | strip_html | normalize_whitespace | jsonify }}
+      "content": {{ indexed_content | normalize_whitespace | jsonify }}
     }
     {%- assign first_search_document = false -%}
   {%- endif -%}
