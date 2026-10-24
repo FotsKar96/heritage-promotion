@@ -65,3 +65,15 @@
   }
   .site-header .site-nav .nav-trigger:focus-visible + label { outline: 3px solid #176b83; outline-offset: 2px; }
 }
+@media screen and (min-width: 601px) {
+  .site-header .site-menu-links {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .site-header .site-nav .trigger {
+    padding-left: 280px;
+    box-sizing: border-box;
+  }
+}
