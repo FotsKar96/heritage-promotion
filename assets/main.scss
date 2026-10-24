@@ -56,3 +56,23 @@ h1, h2, h3 { color:#234d41; }
 .page-content h6 {
   text-align: center;
 }
+.page-content {
+  text-align: center;
+}
+
+.page-content p,
+.page-content li,
+.page-content dt,
+.page-content dd,
+.page-content figcaption,
+.page-content th,
+.page-content td {
+  text-align: center;
+}
+
+.page-content ul,
+.page-content ol {
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+}
