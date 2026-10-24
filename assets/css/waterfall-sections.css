@@ -87,3 +87,68 @@
   .waterfall-detail-content { font-size:.97rem; }
 }
 @media (prefers-reduced-motion:reduce) { .waterfall-home a.waterfall-home-link { transition:none; } }
+
+/* v3: photographic catalogue, geographical filters, sharing and QR. */
+.waterfall-catalog { max-width:1280px; margin:0 auto; --wf-green:#285f50; --wf-ink:#22332e; --wf-line:#cbdcd2; }
+.waterfall-catalog *, .waterfall-share *, .waterfall-qr-section * { box-sizing:border-box; }
+.waterfall-catalog-header { max-width:860px; margin:0 auto 24px; }
+.waterfall-catalog-header .waterfall-eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.06em; color:#496d60; margin-bottom:10px; }
+.waterfall-catalog h1 { font-size:clamp(2rem,3.4vw,2.75rem); font-weight:700; line-height:1.2; margin-bottom:16px; }
+.waterfall-catalog-intro { line-height:1.8; color:#496157; }
+.waterfall-filters { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:22px 0 16px; }
+.waterfall-filters[hidden] { display:none; }
+.waterfall-filters button { cursor:pointer; font:inherit; font-size:.95rem; min-height:44px; padding:10px 20px; border:1px solid #78998c; border-radius:999px; background:#fff; color:#285f50; }
+.waterfall-filters button:hover { background:#e8f0eb; }
+.waterfall-filters button[aria-pressed="true"] { background:#285f50; border-color:#285f50; color:#fff; font-weight:700; }
+.waterfall-catalog-count { color:#496157; font-size:.9rem; margin-bottom:24px; }
+.waterfall-catalog-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:stretch; }
+.waterfall-card { min-width:0; display:flex; flex-direction:column; overflow:hidden; background:#fff; border:1px solid #cbdcd2; border-radius:12px; box-shadow:0 2px 6px #234d4107; transition:transform .16s ease,box-shadow .16s ease; }
+.waterfall-card[hidden] { display:none; }
+.waterfall-card:hover { transform:translateY(-3px); box-shadow:0 8px 20px #234d4112; }
+.waterfall-catalog a.waterfall-card-link { display:flex; flex-direction:column; flex:1; color:#22332e; text-decoration:none; min-width:0; }
+.waterfall-card-photo { overflow:hidden; aspect-ratio:8/5; background:#e8f0eb; }
+.waterfall-card-photo img { display:block; width:100%; height:100%; object-fit:cover; margin:0; }
+.waterfall-card-body { padding:22px 20px 18px; display:flex; flex-direction:column; align-items:center; gap:10px; flex:1; }
+.waterfall-card-group { display:inline-block; font-size:.73rem; color:#496d60; background:#edf4ef; border-radius:999px; padding:4px 10px; }
+.waterfall-card h2 { font-size:1.3rem; font-weight:700; line-height:1.35; margin:0; color:#234d41; }
+.waterfall-card-area { margin:0; font-size:.9rem; color:#496157; }
+.waterfall-card-height { margin:3px 0 0; line-height:1.5; }
+.waterfall-card-height > span { display:block; color:#496157; font-size:.75rem; }
+.waterfall-card-height strong { display:block; color:#285f50; font-size:1.3rem; }
+.waterfall-card-height strong.waterfall-card-height-unknown { font-size:.88rem; }
+.waterfall-card-height .waterfall-card-height-note { max-width:290px; margin:5px auto 0; font-size:.72rem; line-height:1.5; }
+.waterfall-card-summary { margin:0 0 8px; line-height:1.65; font-size:.94rem; }
+.waterfall-card-more { display:inline-block; padding-top:10px; margin-top:auto; font-size:.88rem; font-weight:700; color:#176b83; }
+.waterfall-card-credit { margin:0; padding:12px 16px; border-top:1px solid #e3ebe6; font-size:.7rem; line-height:1.6; color:#496157; overflow-wrap:anywhere; }
+.waterfall-catalog-note { max-width:850px; margin:28px auto 16px; color:#496157; font-size:.87rem; line-height:1.7; }
+.waterfall-share { max-width:900px; margin:40px auto 0; padding:25px 22px; border:1px solid #cbdcd2; border-radius:12px; background:#edf4ef; }
+.waterfall-share h2 { font-size:1.3rem; line-height:1.3; margin:0 0 10px; color:#234d41; }
+.waterfall-share > p { font-size:.94rem; line-height:1.65; margin-bottom:18px; }
+.waterfall-share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+.waterfall-share-actions button, .waterfall-share-actions a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 18px; font:inherit; font-size:.92rem; line-height:1.4; border:1px solid #285f50; border-radius:7px; background:#fff; color:#285f50; cursor:pointer; text-decoration:none; }
+.waterfall-share-actions button:hover, .waterfall-share-actions a:hover { background:#e1ece5; }
+.waterfall-share [hidden] { display:none; }
+.waterfall-share .waterfall-share-status { font-size:.83rem; color:#285f50; margin:12px 0 0; min-height:0; }
+.waterfall-share-status:empty { display:none; }
+.waterfall-copy-fallback { display:block; max-width:650px; margin:18px auto 0; font-size:.85rem; }
+.waterfall-copy-fallback input { display:block; width:100%; margin-top:6px; padding:10px; color:#22332e; border:1px solid #78998c; border-radius:5px; background:#fff; font:inherit; }
+.waterfall-catalog button:focus-visible, .waterfall-catalog a:focus-visible, .waterfall-share button:focus-visible, .waterfall-share a:focus-visible, .waterfall-copy-fallback input:focus-visible, .waterfall-qr-section a:focus-visible { outline:3px solid #176b83; outline-offset:4px; border-radius:4px; }
+.waterfall-qr-section { max-width:850px; margin:36px auto 0; padding-top:20px; border-top:1px solid #cbdcd2; scroll-margin-top:24px; }
+.waterfall-qr-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin:24px auto 0; }
+.waterfall-qr-card { margin:0; padding:22px 16px; border:1px solid #cbdcd2; border-radius:12px; background:#fff; }
+.waterfall-qr-card img { display:block; width:170px; height:170px; max-width:100%; margin:0 auto 16px; background:#fff; }
+.waterfall-qr-card figcaption { font-size:1rem; font-weight:700; line-height:1.5; color:#234d41; }
+.waterfall-qr-url { display:block; margin-top:8px; font-size:.74rem; color:#496157; font-weight:400; overflow-wrap:anywhere; }
+.waterfall-qr-note { font-size:.85rem; color:#496157; line-height:1.65; }
+@media (max-width:950px) { .waterfall-catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } }
+@media (max-width:600px) {
+  .waterfall-catalog-grid { grid-template-columns:1fr; gap:20px; }
+  .waterfall-filters { gap:8px; }
+  .waterfall-filters button { padding:9px 13px; font-size:.84rem; }
+  .waterfall-card-body { padding:20px 18px 18px; }
+  .waterfall-share { padding:22px 16px; }
+  .waterfall-share-actions { flex-direction:column; }
+  .waterfall-share-actions button, .waterfall-share-actions a { width:100%; }
+  .waterfall-qr-grid { grid-template-columns:1fr; }
+}
+@media (prefers-reduced-motion:reduce) { .waterfall-card { transition:none; } .waterfall-card:hover { transform:none; } }

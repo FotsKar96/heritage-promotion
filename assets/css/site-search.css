@@ -77,3 +77,8 @@
     box-sizing: border-box;
   }
 }
+
+/* Keep the renamed Greek menu on one line on smaller desktop screens. */
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+  .site-header .site-search { flex-basis: 220px; }
+}
