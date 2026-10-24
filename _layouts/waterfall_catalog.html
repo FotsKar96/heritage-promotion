@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ '/assets/css/waterfall-sections.css' | relative_url }}">
+<article class="waterfall-catalog" data-waterfall-catalog>
+  <header class="waterfall-catalog-header">
+    <p class="waterfall-eyebrow">10 τόποι για να γνωρίσετε</p>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="waterfall-catalog-intro">{{ content }}</div>
+  </header>
+  <div class="waterfall-filters" role="group" aria-label="Γεωγραφική επιλογή καταρρακτών" data-waterfall-filters hidden>
+    <button type="button" data-waterfall-filter="all" aria-pressed="true">Όλοι</button>
+    <button type="button" data-waterfall-filter="mainland" aria-pressed="false">Ηπειρωτική Ελλάδα</button>
+    <button type="button" data-waterfall-filter="islands" aria-pressed="false">Νησιά</button>
+  </div>
+  <p class="waterfall-catalog-count" role="status" aria-live="polite" aria-atomic="true" data-waterfall-count>Παρουσιάζονται και οι 10 καταρράκτες.</p>
+  <div class="waterfall-catalog-grid">
+    {% assign waterfalls = site.pois | sort: 'order' %}
+    {% for waterfall in waterfalls %}
+      {% assign catalog = site.data.waterfall_catalog[waterfall.wikidatum] %}
+      {% assign facts = site.data.waterfall_facts[waterfall.wikidatum] %}
+      <article class="waterfall-card" data-waterfall-group="{{ catalog.group | default: 'mainland' | escape }}">
+        <a class="waterfall-card-link" href="{{ waterfall.url | relative_url }}" aria-label="Γνωρίστε: {{ waterfall.title | escape }}">
+          <div class="waterfall-card-photo"><img src="{{ waterfall.image | relative_url }}" alt="" loading="lazy" decoding="async" width="640" height="400"></div>
+          <div class="waterfall-card-body">
+            <span class="waterfall-card-group">{{ catalog.group_label | escape }}</span>
+            <h2>{{ waterfall.title | escape }}</h2>
+            <p class="waterfall-card-area">{{ waterfall.area | escape }}</p>
+            <p class="waterfall-card-height">{% if facts.height %}<span>Ύψος πτώσης</span><strong>{{ facts.height | escape }}</strong>{% else %}<span>Ύψος πτώσης</span><strong class="waterfall-card-height-unknown">Δεν έχει διασταυρωθεί</strong>{% endif %}{% if facts.height_note %}<span class="waterfall-card-height-note">{{ facts.height_note | escape }}</span>{% endif %}</p>
+            <p class="waterfall-card-summary">{{ catalog.summary | escape }}</p>
+            <span class="waterfall-card-more">Γνωρίστε τον καταρράκτη <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <p class="waterfall-card-credit">Φωτογραφία: {{ catalog.artist | escape }} · <a href="{{ catalog.commons_page | escape }}" target="_blank" rel="noopener noreferrer">Commons</a> · <a href="{{ catalog.license_url | escape }}" target="_blank" rel="noopener noreferrer">{{ catalog.license | escape }}</a></p>
+      </article>
+    {% endfor %}
+  </div>
+  <p class="waterfall-catalog-note">Τα ύψη αφορούν τις συγκεκριμένες πτώσεις που διευκρινίζονται στις επιμέρους σελίδες. Η επιλογή περιλαμβάνει και συμπλέγματα λιμνών και καταρρακτών.</p>
+  <p><a href="{{ '/map/' | relative_url }}">Δείτε και τα 10 σημεία στον χάρτη →</a></p>
+  {% include waterfall-share.html %}
+</article>
+<script src="{{ '/assets/js/waterfall-catalog.js' | relative_url }}" defer></script>
