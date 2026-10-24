@@ -1,6 +1,6 @@
 ---
 layout: page
-title: POIs List
+title: "Οι καταρράκτες"
 permalink: /pois/
 
 ---
