@@ -1,0 +1,37 @@
+{%- assign waterfall_facts = site.data.waterfall_facts[page.wikidatum] -%}
+<aside class="waterfall-facts" aria-labelledby="waterfall-facts-title">
+  <p class="waterfall-eyebrow">Τα βασικά χαρακτηριστικά</p>
+  <h2 id="waterfall-facts-title">Με μια ματιά</h2>
+  <dl class="waterfall-fact-list">
+    <div class="waterfall-fact">
+      <dt>Περιοχή</dt>
+      <dd>{{ page.area | escape }}</dd>
+    </div>
+    <div class="waterfall-fact waterfall-fact-height">
+      <dt>Ύψος πτώσης</dt>
+      <dd>{% if waterfall_facts.height %}<strong class="waterfall-height-value">{{ waterfall_facts.height | escape }}</strong>{% else %}<span class="waterfall-height-unknown">Δεν έχει διασταυρωθεί</span>{% endif %}
+        {% if waterfall_facts.height_note %}<span class="waterfall-fact-note">{{ waterfall_facts.height_note | escape }}</span>{% endif %}
+      </dd>
+    </div>
+    {% if waterfall_facts.landscape %}
+    <div class="waterfall-fact">
+      <dt>Τοπίο</dt>
+      <dd>{{ waterfall_facts.landscape | escape }}</dd>
+    </div>
+    {% endif %}
+    {% if waterfall_facts.interest %}
+    <div class="waterfall-fact">
+      <dt>Ξέρατε ότι;</dt>
+      <dd>{{ waterfall_facts.interest | escape }}</dd>
+    </div>
+    {% endif %}
+  </dl>
+  {% if waterfall_facts.sources %}
+  <div class="waterfall-fact-sources">
+    <p>Τεκμηρίωση χαρακτηριστικών</p>
+    <ul>{% for source in waterfall_facts.sources %}<li><a href="{{ source.url | escape }}" target="_blank" rel="noopener noreferrer">{{ source.label | escape }}</a></li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+  <p class="waterfall-height-explanation">Το ύψος αφορά την πτώση του νερού, όχι το υψόμετρο του τόπου. Σε συμπλέγματα διευκρινίζεται ποια πτώση περιγράφεται.</p>
+  <a class="waterfall-fact-map-link" href="#waterfall-map-section">Δείτε τη θέση στον χάρτη ↓</a>
+</aside>
