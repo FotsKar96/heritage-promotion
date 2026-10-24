@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /search.json
+search: false
+---
+[
+{%- assign search_documents = site.html_pages | concat: site.pois -%}
+{%- assign first_search_document = true -%}
+{%- for document in search_documents -%}
+  {%- if document.title and document.search != false and document.published != false and document.url != '/404.html' -%}
+    {%- unless first_search_document -%},{%- endunless -%}
+    {
+      "title": {{ document.title | jsonify }},
+      "url": {{ document.url | relative_url | jsonify }},
+      "area": {{ document.area | default: '' | jsonify }},
+      "description": {{ document.description | default: '' | jsonify }},
+      "content": {{ document.content | markdownify | strip_html | normalize_whitespace | jsonify }}
+    }
+    {%- assign first_search_document = false -%}
+  {%- endif -%}
+{%- endfor -%}
+]
