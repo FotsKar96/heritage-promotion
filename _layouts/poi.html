@@ -2,31 +2,33 @@
 layout: default
 load_leaflet: 1
 ---
-<article class="waterfall-page">
+<link rel="stylesheet" href="{{ '/assets/css/waterfall-sections.css' | relative_url }}">
+<article class="waterfall-page waterfall-detail">
+  <p class="waterfall-back-link"><a href="{{ '/pois/' | relative_url }}">← Όλοι οι καταρράκτες</a></p>
   <h1 id="poi_title">{{ page.title | escape }}</h1>
   <span id="wikidata_title" hidden></span>
-  <p id="wikidata_descr">{{ page.description | escape }}</p>
-  <p>
-    <a id="wikidata_href" hidden target="_blank"
-       rel="noopener noreferrer">Ελληνικό λήμμα Wikipedia</a>
-  </p>
+  <p id="wikidata_descr" class="waterfall-detail-intro">{{ page.description | escape }}</p>
+  <div class="waterfall-overview">
+    <figure class="waterfall-detail-photo">
+      {% if page.image %}
+      <img id="wikidata_img" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" decoding="async">
+      {% else %}
+      <img id="wikidata_img" hidden alt="{{ page.title | escape }}" decoding="async">
+      {% endif %}
+      <p class="waterfall-photo-fallback">Η φωτογραφία δεν είναι διαθέσιμη αυτή τη στιγμή. Οι πληροφορίες και οι πηγές ακολουθούν παρακάτω.</p>
+    </figure>
+    {% include waterfall-facts.html %}
+  </div>
+  <p class="waterfall-wikipedia-link"><a id="wikidata_href" hidden target="_blank" rel="noopener noreferrer">Διαβάστε το ελληνικό λήμμα στη Wikipedia ↗</a></p>
   <span id="wikipedia_title" hidden></span>
   <p id="wikidata_location"></p>
-  {% if page.image %}
-  <img id="wikidata_img" src="{{ page.image | relative_url }}"
-       alt="{{ page.title | escape }}"
-       style="width:100%;height:auto;padding-bottom:8px;">
-  {% else %}
-  <img id="wikidata_img" hidden alt="{{ page.title | escape }}"
-       style="width:100%;height:auto;padding-bottom:8px;">
-  {% endif %}
-  <div id="map"
-       style="height:320px;width:100%;background:#eef2ef"></div>
-  {{ content }}
+  <section id="waterfall-map-section" class="waterfall-map-section" aria-labelledby="waterfall-map-title">
+    <h2 id="waterfall-map-title">Θέση στον χάρτη</h2>
+    <div id="map" style="height:360px;width:100%;background:#eef2ef"></div>
+  </section>
+  <div class="waterfall-detail-content">{{ content }}</div>
 </article>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
-<script>
-  var wikidatum = {{ page.wikidatum | jsonify }};
-</script>
+<script>var wikidatum = {{ page.wikidatum | jsonify }};</script>
 <script src="{{ '/assets/js/get_wiki_item.js' | relative_url }}"></script>
