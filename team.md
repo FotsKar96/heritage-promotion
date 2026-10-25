@@ -6,7 +6,7 @@ permalink: /team/
 ## Τα μέλη
 
 - **ΦΩΤΗΣ ΚΑΡΑΚΕΧΑΓΙΑΣ** - [Wikimedia FotsKara96](https://el.wikipedia.org/wiki/FotsKara96) - [GitHub FotsKar96](https://github.com/FotsKar96)
-- **ΧΑΡΙΤΩΜΕΝΗ ΓΙΑΝΝΟΥΤΣΟΥ** - [Wikimedia USERNAME_WIKI_B](https://el.wikipedia.org/wiki/Χρήστης:USERNAME_WIKI_B) - [GitHub USERNAME_GITHUB_B](https://github.com/USERNAME_GITHUB_B)
+- **ΧΑΡΙΤΩΜΕΝΗ ΓΙΑΝΝΟΥΤΣΟΥ** - [Wikimedia u20gian](https://el.wikipedia.org/wiki/Χρήστης:u20gian) - [GitHub Meni022](https://github.com/Meni022)
 
 Η ιστοσελίδα αναπτύσσεται για το μάθημα
 Εργαλεία Προβολής Τουριστικού Προϊόντος
