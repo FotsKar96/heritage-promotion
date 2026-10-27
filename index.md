@@ -2,6 +2,7 @@
 layout: waterfall_home
 title: "Αρχική"
 description: "Εξερευνήστε δέκα επιλεγμένους καταρράκτες της Ελλάδας με φωτογραφίες, χάρτες και τεκμηριωμένα χαρακτηριστικά."
+image: /assets/images/drymona-home.jpg
 ---
 <section class="waterfall-welcome" aria-labelledby="waterfall-welcome-title">
   <p class="waterfall-eyebrow">10 σημεία · Φυσικά τοπία · Χάρτες και πηγές</p>
