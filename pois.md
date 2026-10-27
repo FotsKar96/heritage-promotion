@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: waterfall_catalog
 title: "Οι καταρράκτες"
 permalink: /pois/
 description: "Δέκα επιλεγμένοι καταρράκτες της Ελλάδας με φωτογραφίες και χάρτες."
