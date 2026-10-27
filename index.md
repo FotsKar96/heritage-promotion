@@ -48,3 +48,17 @@ image: /assets/images/drymona-home.jpg
   <a class="waterfall-home-link" href="{{ '/about/' | relative_url }}"><span class="waterfall-link-label">Γνωρίστε την εργασία</span><strong>Πηγές και μεθοδολογία</strong><span>Μάθετε πώς επιλέγουμε και τεκμηριώνουμε τις πληροφορίες.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
 </nav>
 <p class="waterfall-home-note">Οι πηγές αναφέρονται στις επιμέρους σελίδες. Για την τρέχουσα πρόσβαση συμβουλευτείτε τον αρμόδιο τοπικό φορέα. <a href="{{ '/team/' | relative_url }}">Γνωρίστε την ομάδα μας</a>.</p>
+<div class="waterfall-qr-row">
+  <figure class="waterfall-qr">
+    <a href="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
+       target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
+           alt="QR για την αρχική σελίδα των καταρρακτών"
+           width="180" height="180" loading="lazy">
+    </a>
+    <figcaption>
+      <strong>Το site στο κινητό σας</strong><br>
+      Σαρώστε το QR ή πατήστε το για μεγέθυνση.
+    </figcaption>
+  </figure>
+</div>
