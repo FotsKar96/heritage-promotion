@@ -76,3 +76,50 @@ h1, h2, h3 { color:#234d41; }
   margin-left: 0;
   padding-left: 0;
 }
+.waterfall-qr-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+.waterfall-qr-row-center {
+  justify-content: center;
+}
+
+.waterfall-qr {
+  box-sizing: border-box;
+  width: 230px;
+  max-width: 100%;
+  margin: 0;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #cbdcd3;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.waterfall-qr a {
+  display: block;
+}
+
+.waterfall-qr img {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 12px;
+  border-radius: 0;
+}
+
+.waterfall-qr figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #234d41;
+}
+
+@media screen and (max-width: 600px) {
+  .waterfall-qr-row {
+    justify-content: center;
+  }
+}
