@@ -47,8 +47,8 @@ image: /assets/images/drymona-home.jpg
   <a class="waterfall-home-link" href="{{ '/prin-tin-episkepsi/' | relative_url }}"><span class="waterfall-link-label">Προετοιμαστείτε</span><strong>Πριν από την επίσκεψη</strong><span>Διαβάστε όσα χρειάζεται να ελέγξετε πριν ξεκινήσετε.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
   <a class="waterfall-home-link" href="{{ '/about/' | relative_url }}"><span class="waterfall-link-label">Γνωρίστε την εργασία</span><strong>Πηγές και μεθοδολογία</strong><span>Μάθετε πώς επιλέγουμε και τεκμηριώνουμε τις πληροφορίες.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
 </nav>
-<div class="waterfall-qr-row">
-  <figure class="waterfall-qr" style="flex-direction: column; align-items: center;">
+<div class="waterfall-qr-row" style="flex-direction: column; align-items: center;">
+  <figure class="waterfall-qr">
     <a href="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
        target="_blank" rel="noopener noreferrer">
       <img src="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
