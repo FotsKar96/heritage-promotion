@@ -6,8 +6,8 @@ image: /assets/images/drymona-home.jpg
 ---
 <section class="waterfall-welcome" aria-labelledby="waterfall-welcome-title">
   <p class="waterfall-eyebrow">10 σημεία · Φυσικά τοπία · Χάρτες και πηγές</p>
-  <h1 id="waterfall-welcome-title">Εξερευνήστε τους καταρράκτες της Ελλάδας</h1>
-  <p class="waterfall-welcome-intro">Από την Έδεσσα μέχρι τα νησιωτικά μονοπάτια, γνωρίστε δέκα επιλεγμένους τόπους όπου το νερό δίνει μορφή στο τοπίο.</p>
+  <h1 id="waterfall-welcome-title">Εξερευνήστε 10 καταρράκτες και υδάτινα τοπία της Ελλάδας</h1>
+  <p class="waterfall-welcome-intro">Καταρράκτες μέσα στην πόλη, δασικές ρεματιές και φαράγγια με φυσικές λίμνες. Γνωρίστε δέκα διαφορετικούς προορισμούς στην ηπειρωτική και τη νησιωτική Ελλάδα και ανακαλύψτε τι ξεχωρίζει στον καθένα.</p>
   <div class="waterfall-actions">
     <a class="waterfall-button" href="{{ '/pois/' | relative_url }}">Γνωρίστε τους καταρράκτες</a>
     <a class="waterfall-button waterfall-button-secondary" href="{{ '/map/' | relative_url }}">Εξερευνήστε τον χάρτη</a>
@@ -37,9 +37,9 @@ image: /assets/images/drymona-home.jpg
 </section>
 
 <section class="waterfall-home-about" aria-labelledby="waterfall-home-about-title">
-  <h2 id="waterfall-home-about-title">Μια περιήγηση στο υδάτινο τοπίο</h2>
-  <p>Η επιλογή μας συνδυάζει καταρράκτες μέσα στην πόλη, δασικές ρεματιές και συμπλέγματα λιμνών και καταρρακτών. Κάθε τόπος παρουσιάζεται με εικόνα, θέση στον χάρτη, σύντομη περιγραφή και πηγές για περισσότερες πληροφορίες.</p>
-  <p>Στις κάρτες χαρακτηριστικών θα βρείτε την περιοχή, το αναφερόμενο ύψος της συγκεκριμένης πτώσης όπου έχει διασταυρωθεί, τη μορφή του τοπίου και ένα ενδιαφέρον στοιχείο. Η δεκάδα αποτελεί θεματική επιλογή και δεν εξαντλεί τους καταρράκτες της χώρας.</p>
+  <h2 id="waterfall-home-about-title">Διαλέξτε τον τρόπο της περιήγησής σας.</h2>
+  <p>Ξεκινήστε από τις φωτογραφικές κάρτες για μια πρώτη γνωριμία ή ανοίξτε τον χάρτη για να δείτε τη γεωγραφική τους θέση. Κάθε σελίδα συνδυάζει περιγραφή του τοπίου, χρήσιμες διευκρινίσεις για την επίσκεψη και συνδέσμους στις πηγές των πληροφοριών.</p>
+  <p>Η δεκάδα παρουσιάζει διαφορετικές μορφές του νερού στο τοπίο και περιλαμβάνει τόσο μεμονωμένες πτώσεις όσο και συμπλέγματα καταρρακτών. Δεν αποτελεί πλήρη κατάλογο της χώρας. Πριν οργανώσετε επίσκεψη, συμβουλευτείτε την ενημέρωση του αρμόδιου τοπικού φορέα.</p>
 </section>
 
 <nav class="waterfall-home-links" aria-label="Σχεδιάστε την περιήγησή σας">
@@ -47,7 +47,6 @@ image: /assets/images/drymona-home.jpg
   <a class="waterfall-home-link" href="{{ '/prin-tin-episkepsi/' | relative_url }}"><span class="waterfall-link-label">Προετοιμαστείτε</span><strong>Πριν από την επίσκεψη</strong><span>Διαβάστε όσα χρειάζεται να ελέγξετε πριν ξεκινήσετε.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
   <a class="waterfall-home-link" href="{{ '/about/' | relative_url }}"><span class="waterfall-link-label">Γνωρίστε την εργασία</span><strong>Πηγές και μεθοδολογία</strong><span>Μάθετε πώς επιλέγουμε και τεκμηριώνουμε τις πληροφορίες.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
 </nav>
-<p class="waterfall-home-note">Οι πηγές αναφέρονται στις επιμέρους σελίδες. Για την τρέχουσα πρόσβαση συμβουλευτείτε τον αρμόδιο τοπικό φορέα. <a href="{{ '/team/' | relative_url }}">Γνωρίστε την ομάδα μας</a>.</p>
 <div class="waterfall-qr-row">
   <figure class="waterfall-qr">
     <a href="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
@@ -61,4 +60,5 @@ image: /assets/images/drymona-home.jpg
       Σαρώστε το QR ή πατήστε το για μεγέθυνση.
     </figcaption>
   </figure>
+  <p class="waterfall-home-note">Οι πηγές αναφέρονται στις επιμέρους σελίδες. Για την τρέχουσα πρόσβαση συμβουλευτείτε τον αρμόδιο τοπικό φορέα. <a href="{{ '/team/' | relative_url }}">Γνωρίστε την ομάδα μας</a>.</p>
 </div>
