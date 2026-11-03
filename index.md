@@ -48,7 +48,7 @@ image: /assets/images/drymona-home.jpg
   <a class="waterfall-home-link" href="{{ '/about/' | relative_url }}"><span class="waterfall-link-label">Γνωρίστε την εργασία</span><strong>Πηγές και μεθοδολογία</strong><span>Μάθετε πώς επιλέγουμε και τεκμηριώνουμε τις πληροφορίες.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
 </nav>
 <div class="waterfall-qr-row">
-  <figure class="waterfall-qr">
+  <figure class="waterfall-qr" style="flex-direction: column; align-items: center;">
     <a href="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
        target="_blank" rel="noopener noreferrer">
       <img src="{{ '/assets/images/qr/site-qr.svg' | relative_url }}"
