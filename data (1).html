@@ -1,0 +1,1181 @@
+---
+layout: default
+title: "Τα δεδομένα"
+permalink: /data/
+description: "Πίνακας, πρότυπη δομή 12 πεδίων και βιβλιογραφία για τα δέκα σημεία, με δήλωση τεκμηρίωσης ανά σημείο."
+---
+<style>/* «Τα δεδομένα» — scoped to .data-page, palette from waterfall-sections.css */
+.data-page {
+  --dp-green: #285f50;
+  --dp-ink: #22332e;
+  --dp-head: #234d41;
+  --dp-soft: #e8f0eb;
+  --dp-line: #cbdcd2;
+  --dp-muted: #496157;
+  --dp-amber: #a4692a;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: var(--dp-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.data-page *, .data-page *::before, .data-page *::after { box-sizing: border-box; }
+.data-page h1, .data-page h2, .data-page h3, .data-page h4 { color: var(--dp-head); line-height: 1.22; }
+.data-page h1 { margin: 0 0 14px; font-size: clamp(2.1rem, 4vw, 3.15rem); letter-spacing: -.025em; }
+.data-page h2 { margin: 0; font-size: clamp(1.55rem, 2.6vw, 2rem); letter-spacing: -.015em; }
+.data-page h3 { margin: 0 0 6px; font-size: 1rem; }
+.data-page,
+.data-page p, .data-page li, .data-page dt, .data-page dd,
+.data-page th, .data-page td, .data-page h1, .data-page h2,
+.data-page h3, .data-page h4 { text-align: left; }
+.dp-hero, .dp-hero h1, .dp-hero p, .dp-stats li { text-align: center; }
+.dp-src-list, .dp-secondary ul { list-style-position: outside; }
+.data-page a { color: var(--dp-green); }
+.data-page a:focus-visible, .data-page button:focus-visible, .data-page summary:focus-visible {
+  outline: 3px solid #176b83; outline-offset: 3px; border-radius: 3px;
+}
+.dp-visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Hero */
+.dp-hero { max-width: 920px; margin: 0 auto; text-align: center; }
+.dp-eyebrow {
+  margin: 0 0 10px; color: #496d60; font-size: .8rem; font-weight: 700;
+  letter-spacing: .07em;
+}
+.dp-lead { max-width: 760px; margin: 0 auto; color: #3f5a50; font-size: 1.1rem; line-height: 1.7; }
+.dp-stats {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px;
+  margin: 26px 0 0; padding: 0; list-style: none;
+}
+.dp-stats li {
+  padding: 12px 8px; border: 1px solid var(--dp-line); border-radius: 10px; background: #fff;
+}
+.dp-stats strong { display: block; color: var(--dp-green); font-size: 1.45rem; line-height: 1.2; }
+.dp-stats span { display: block; color: #5c7268; font-size: .72rem; line-height: 1.35; }
+
+/* Section navigation */
+.dp-subnav {
+  position: sticky; top: 0; z-index: 500; display: flex; gap: 6px;
+  margin: 28px 0 0; padding: 9px 4px; overflow-x: auto;
+  background: rgba(253, 253, 253, .96); border-bottom: 1px solid var(--dp-line);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.dp-subnav a {
+  flex: 0 0 auto; padding: 7px 12px; border-radius: 999px; color: #3f5a50;
+  font-size: .85rem; font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.dp-subnav a:hover { background: var(--dp-soft); color: #204d41; }
+
+/* Sections */
+.dp-section { margin: 46px 0; scroll-margin-top: 64px; }
+.dp-section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px 20px;
+  flex-wrap: wrap; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--dp-line);
+}
+.dp-kicker { margin: 0; color: #6b8177; font-size: .82rem; }
+.dp-note { max-width: 920px; margin: 0 0 16px; color: #3f5a50; font-size: .95rem; }
+.dp-h3 { margin: 34px 0 10px; font-size: 1.15rem; }
+.dp-source-line { margin: 12px 0 0; color: #6b8177; font-size: .78rem; }
+
+/* Table */
+.dp-table-wrap {
+  overflow-x: auto; border: 1px solid var(--dp-line); border-radius: 12px; background: #fff;
+}
+.dp-table { width: 100%; min-width: 980px; border-collapse: collapse; font-size: .9rem; }
+.dp-table thead th {
+  padding: 0; background: #eef4f0; border-bottom: 2px solid #b9cec3;
+  color: #2f5548; font-size: .78rem; font-weight: 700; text-align: left; letter-spacing: .02em;
+}
+.dp-table thead th button {
+  display: flex; align-items: center; justify-content: space-between; gap: 6px;
+  width: 100%; padding: 12px; border: 0; background: none; color: inherit;
+  font: inherit; text-align: left; cursor: pointer;
+}
+.dp-table thead th button:hover { background: #e3ede7; }
+.dp-arrow { opacity: .4; font-size: .8rem; }
+.dp-table thead th[aria-sort="ascending"] .dp-arrow,
+.dp-table thead th[aria-sort="descending"] .dp-arrow { opacity: 1; color: var(--dp-green); }
+.dp-table tbody td { padding: 11px 12px; border-top: 1px solid #e3ebe6; vertical-align: top; }
+.dp-table tbody tr:hover { background: #f6faf7; }
+.dp-table tbody tr[hidden] { display: none; }
+.dp-td-name a { font-weight: 600; }
+.dp-jump {
+  display: inline-block; margin-left: 8px; color: #6b8177; font-size: .72rem;
+  font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.dp-jump:hover { color: var(--dp-green); text-decoration: underline; }
+.dp-order { margin-left: 7px; color: #7a9287; font-size: .7rem; font-weight: 700; }
+.dp-region-inline { display: block; margin-top: 2px; color: #6b8177; font-size: .74rem; }
+.dp-td-height strong { font-size: 1.02rem; }
+.dp-src { display: block; margin-top: 3px; color: #6b8177; font-size: .7rem; line-height: 1.4; }
+.dp-src a { color: inherit; text-decoration: underline dotted; }
+.dp-unknown { color: #8a5a1f; font-size: .8rem; font-weight: 600; }
+.dp-access {
+  display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
+  border: 1px solid; border-radius: 6px; font-size: .85rem; font-weight: 700; line-height: 1;
+}
+.dp-access-Α { color: #1f5546; background: #e4f0e9; border-color: #a9c9b7; }
+.dp-access-Β { color: #6b4a12; background: #f6efe0; border-color: #d9c39a; }
+.dp-access-Γ { color: #7d3527; background: #f8e9e5; border-color: #dfb6ac; }
+.dp-td-qid a { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .8rem; }
+.dp-td-src a { font-weight: 600; }
+.dp-more {
+  margin-left: 5px; padding: 1px 6px; border-radius: 999px; background: var(--dp-soft);
+  color: #2f5548; font-size: .7rem;
+}
+.dp-table-foot { margin: 8px 0 0; color: #6b8177; font-size: .78rem; }
+
+/* Documentation cards */
+.dp-method {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 26px;
+  margin: 18px 0 22px; padding: 18px 20px; border: 1px solid var(--dp-line);
+  border-radius: 12px; background: #eef4f0;
+}
+.dp-method p { margin: 0; color: #3f5a50; font-size: .88rem; }
+.dp-cards { display: grid; gap: 10px; }
+.dp-card { border: 1px solid var(--dp-line); border-radius: 12px; background: #fff; scroll-margin-top: 72px; }
+.dp-card summary {
+  position: relative; display: grid; grid-template-columns: 1fr auto; gap: 3px 16px;
+  padding: 16px 52px 16px 18px; cursor: pointer; list-style: none;
+}
+.dp-card summary::-webkit-details-marker { display: none; }
+.dp-card summary:hover { background: #f6faf7; border-radius: 12px; }
+.dp-card summary::after {
+  content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+  color: var(--dp-green); font-size: 1.2rem; font-weight: 600;
+}
+.dp-card[open] summary::after { content: "−"; }
+.dp-card[open] summary { border-bottom: 1px solid #e3ebe6; border-radius: 12px 12px 0 0; background: #f7faf8; }
+.dp-card-title { display: flex; align-items: baseline; gap: 10px; color: var(--dp-head); font-size: 1.02rem; font-weight: 700; }
+.dp-num { color: #7a9287; font-size: .72rem; font-weight: 700; letter-spacing: .05em; }
+.dp-card-title a { color: inherit; text-decoration: none; }
+.dp-card-title a:hover { color: var(--dp-green); text-decoration: underline; }
+.dp-card-cta { margin: 14px 0 4px; }
+.dp-card-meta { grid-column: 1; color: #6b8177; font-size: .78rem; }
+.dp-card-badges { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px; }
+.dp-chip {
+  padding: 3px 8px; border: 1px solid var(--dp-line); border-radius: 999px;
+  background: #eef4f0; color: #2f5548; font-size: .74rem;
+}
+.dp-status {
+  padding: 3px 9px; border: 1px solid; border-radius: 999px; font-size: .74rem; font-weight: 600;
+}
+.dp-status-full { background: #e1efe7; border-color: #a9c9b7; color: #1f5546; }
+.dp-status-limited { background: #f7ecdc; border-color: #dcc39b; color: #7a4d12; }
+.dp-card-body { padding: 4px 18px 18px; }
+.dp-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 26px; margin: 0; }
+.dp-fields > div { padding: 10px 0; border-bottom: 1px solid #eef2ef; }
+.dp-fields > div.dp-field-wide { grid-column: 1 / -1; }
+.dp-fields dt { margin-bottom: 3px; color: #496d60; font-size: .72rem; font-weight: 700; }
+.dp-fields dd { margin: 0; font-size: .9rem; line-height: 1.6; }
+.dp-big { display: block; color: var(--dp-green); font-size: 1.5rem; font-weight: 700; line-height: 1.25; }
+.dp-field-note { display: block; margin-top: 2px; color: #6b8177; font-size: .78rem; }
+.dp-field-src { display: block; margin-top: 4px; font-size: .78rem; }
+.dp-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .82rem; }
+.dp-mini { display: block; margin-top: 3px; font-size: .74rem; }
+.dp-src-list { margin: 0; padding-left: 18px; }
+.dp-src-list li { margin: 2px 0; }
+.dp-tier { display: block; margin-top: 4px; color: #6b8177; font-size: .76rem; }
+.dp-doc-box { margin-top: 14px; padding: 13px 16px; border-left: 4px solid; border-radius: 8px; }
+.dp-doc-box h3 { margin: 0 0 4px; font-size: .9rem; }
+.dp-doc-box p { margin: 0; font-size: .86rem; line-height: 1.65; }
+.dp-doc-full { background: #eef6f1; border-color: var(--dp-green); }
+.dp-doc-limited { background: #fbf4e9; border-color: var(--dp-amber); }
+.dp-wiki {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+  margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--dp-line);
+}
+.dp-wiki-note { margin: 0; color: #6b8177; font-size: .78rem; }
+.dp-wiki-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.data-page a.dp-btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 38px;
+  padding: 8px 14px; border: 1px solid var(--dp-green); border-radius: 8px;
+  background: var(--dp-green); color: #fff; font-size: .82rem; font-weight: 600; text-decoration: none;
+}
+.data-page a.dp-btn:hover { background: #204d41; border-color: #204d41; color: #fff; }
+.data-page a.dp-btn-ghost { background: #fff; color: var(--dp-green); border-color: #78998c; }
+.data-page a.dp-btn-ghost:hover { background: var(--dp-soft); color: #204d41; }
+
+/* Bibliography */
+.dp-bib-table { min-width: 900px; }
+.dp-bib-num { color: #7a9287; font-weight: 700; }
+.dp-bib-site { display: block; margin-top: 2px; color: #6b8177; font-size: .72rem; }
+.dp-bib-table td:nth-child(5) { color: #3f5a50; font-size: .84rem; }
+.dp-secondary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 22px; }
+.dp-secondary ul { margin: 0; padding-left: 18px; font-size: .88rem; }
+.dp-secondary p { margin: 0; color: #3f5a50; font-size: .88rem; }
+
+/* Footer */
+.dp-footer { margin-top: 50px; padding: 22px 0 8px; border-top: 1px solid var(--dp-line); color: #6b8177; font-size: .78rem; }
+.dp-footer p { margin: 0 0 4px; }
+
+/* Standalone preview chrome */
+.dp-preview-body {
+  --dp-green: #285f50; --dp-ink: #22332e; --dp-head: #234d41;
+  --dp-soft: #e8f0eb; --dp-line: #cbdcd2; --dp-muted: #496157;
+  margin: 0; background: #fdfdfd; color: #22332e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.dp-sitebar { background: #fff; border-bottom: 1px solid #e8e8e8; }
+.dp-sitebar-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 1320px; margin: 0 auto; padding: 14px 20px;
+}
+.dp-site-title { flex: 0 0 auto; color: var(--dp-head); font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+.dp-sitebar nav { display: flex; gap: 16px; overflow-x: auto; }
+.dp-sitebar nav a { color: #496157; font-size: .82rem; text-decoration: none; white-space: nowrap; }
+.dp-sitebar nav a:hover { color: var(--dp-green); }
+.dp-sitebar nav a.is-current { color: var(--dp-green); font-weight: 700; box-shadow: inset 0 -2px 0 var(--dp-green); }
+.dp-wrap { max-width: 1280px; margin: 0 auto; padding: 28px 20px 44px; }
+/* Let the Jekyll page use the same width as the catalogue while keeping other pages untouched. */
+@media (min-width: 900px) {
+  .page-content .wrapper:has(.data-page) { max-width: 1320px; }
+}
+
+/* Table search and sort */
+.dp-table-tools {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end;
+  gap: 12px 16px; margin: 0 0 12px; padding: 14px 16px;
+  border: 1px solid var(--dp-line); border-radius: 12px; background: #f7faf8;
+}
+.dp-tool-field { min-width: 0; }
+.dp-tool-field label {
+  display: block; margin-bottom: 5px; color: #2f5548; font-size: .78rem; font-weight: 700;
+}
+.dp-search-wrap { position: relative; }
+.dp-search-icon {
+  position: absolute; top: 50%; left: 12px; transform: translateY(-50%);
+  color: #6b8177; pointer-events: none;
+}
+.dp-search-wrap input {
+  width: 100%; min-height: 42px; padding: 9px 42px 9px 36px;
+  border: 1px solid #78998c; border-radius: 8px; background: #fff;
+  color: var(--dp-ink); font: inherit; font-size: .92rem; line-height: 1.4;
+}
+.dp-search-wrap input::placeholder { color: #7a9287; opacity: 1; }
+.dp-search-wrap input:focus {
+  border-color: var(--dp-green); box-shadow: 0 0 0 3px rgba(40, 95, 80, .14); outline: none;
+}
+.dp-search-wrap input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.dp-search-clear {
+  position: absolute; top: 50%; right: 6px; transform: translateY(-50%);
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; padding: 0; border: 0; border-radius: 50%;
+  background: #e8f0eb; color: #2f5548; font: inherit; font-size: 1.1rem; line-height: 1; cursor: pointer;
+}
+.dp-search-clear:hover { background: #d8e7dd; }
+.dp-sort-row { display: flex; gap: 8px; }
+.dp-sort-row select {
+  min-height: 42px; min-width: 210px; padding: 8px 34px 8px 12px;
+  border: 1px solid #78998c; border-radius: 8px; background: #fff;
+  color: var(--dp-ink); font: inherit; font-size: .88rem; cursor: pointer;
+}
+.dp-sort-row select:focus {
+  border-color: var(--dp-green); box-shadow: 0 0 0 3px rgba(40, 95, 80, .14); outline: none;
+}
+.dp-sort-dir {
+  flex: 0 0 auto; width: 42px; min-height: 42px; padding: 0;
+  border: 1px solid #78998c; border-radius: 8px; background: #fff;
+  color: var(--dp-green); font: inherit; font-size: 1.1rem; font-weight: 700; cursor: pointer;
+}
+.dp-sort-dir:hover:not(:disabled) { border-color: var(--dp-green); background: #f1f7f3; }
+.dp-sort-dir:disabled { opacity: .45; cursor: not-allowed; }
+.dp-table-status {
+  grid-column: 1 / -1; margin: 0; padding-top: 10px; border-top: 1px solid #dfeae4;
+  color: #2f5548; font-size: .86rem; font-weight: 600;
+}
+.dp-table-empty {
+  margin: 10px 0 0; padding: 12px 14px; border: 1px dashed #b9cec3; border-radius: 8px;
+  background: #f7faf8; color: #3f5a50; font-size: .9rem;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .dp-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dp-secondary { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .dp-fields { grid-template-columns: 1fr; }
+  .dp-method { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .dp-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dp-card summary { grid-template-columns: 1fr; padding-right: 44px; }
+  .dp-card-badges { grid-column: 1; grid-row: auto; justify-content: flex-start; }
+  .dp-wiki { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 760px) {
+  .dp-table-tools { grid-template-columns: 1fr; }
+  .dp-sort-row select { flex: 1 1 auto; min-width: 0; }
+}
+@media (max-width: 520px) {
+  .dp-search-wrap input, .dp-sort-row select { font-size: 16px; }
+}
+@media print {
+  .dp-subnav, .dp-wiki, .dp-table-tools, .dp-table-empty { display: none !important; }
+  .data-page { max-width: none; }
+  .dp-card { break-inside: avoid; }
+  .dp-card-body { display: block !important; }
+}
+</style>
+<article class="data-page">
+
+<header class="dp-hero">
+  <p class="dp-eyebrow">Τεκμηρίωση · 10 σημεία · 10 πηγές</p>
+  <h1>Τα δεδομένα</h1>
+  <p class="dp-lead">Πίνακας, πρότυπη δομή 12 πεδίων και βιβλιογραφία για τα δέκα σημεία. Κάθε τιμή δηλώνει την πηγή της· κάθε σημείο δηλώνει πόσο καλά τεκμηριωμένο είναι.</p>
+  <ul class="dp-stats" aria-label="Σύνοψη δεδομένων">
+    <li><strong>10</strong><span>σημεία</span></li>
+    <li><strong>8</strong><span>περιφέρειες</span></li>
+    <li><strong>4</strong><span>επαρκής τεκμηρίωση</span></li>
+    <li><strong>6</strong><span>περιορισμένη</span></li>
+    <li><strong>3</strong><span>χωρίς ύψος</span></li>
+    <li><strong>1</strong><span>επιστημονική μελέτη</span></li>
+  </ul>
+</header>
+<nav class="dp-subnav" aria-label="Ενότητες της σελίδας">
+  <a href="#pinakas">Πίνακας</a>
+  <a href="#kartes">Δομή 12 πεδίων</a>
+  <a href="#vivliografia">Βιβλιογραφία</a>
+</nav>
+
+<section class="dp-section" id="pinakas" aria-labelledby="pinakas-title">
+  <div class="dp-section-head">
+    <h2 id="pinakas-title">Πίνακας δεδομένων</h2>
+    <p class="dp-kicker">10 γραμμές · αναζήτηση και ταξινόμηση</p>
+  </div>
+  <p class="dp-note" id="dp-table-note">Το ύψος αφορά την πτώση του νερού, όχι το υψόμετρο του τόπου. Όπου δεν υπάρχει διασταυρωμένη τιμή, η σελίδα το δηλώνει αντί να το εκτιμά. Τα «δεν έχει διασταυρωθεί» ταξινομούνται πάντα στο τέλος. Η αναζήτηση και η ταξινόμηση αφορούν μόνο τον πίνακα. Το όνομα κάθε σημείου οδηγεί στην πλήρη σελίδα του.</p>
+  <div class="dp-table-tools" role="group" aria-label="Αναζήτηση και ταξινόμηση πίνακα">
+    <div class="dp-tool-field">
+      <label for="dp-search">Αναζήτηση στον πίνακα</label>
+      <div class="dp-search-wrap">
+        <svg class="dp-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input type="search" id="dp-search" placeholder="Όνομα, περιοχή, δραστηριότητα…" autocomplete="off" spellcheck="false" aria-controls="dp-table" aria-describedby="dp-search-hint">
+        <span class="dp-visually-hidden" id="dp-search-hint">Η αναζήτηση αφορά μόνο τον πίνακα.</span>
+        <button type="button" class="dp-search-clear" id="dp-search-clear" hidden aria-label="Καθαρισμός αναζήτησης">×</button>
+      </div>
+    </div>
+    <div class="dp-tool-field">
+      <label for="dp-sort">Ταξινόμηση</label>
+      <div class="dp-sort-row">
+        <select id="dp-sort" aria-controls="dp-table">
+          <option value="">Προεπιλεγμένη σειρά</option>
+          <option value="name">Όνομα</option>
+          <option value="pe">Περιφερειακή ενότητα</option>
+          <option value="height">Ύψος</option>
+          <option value="access">Πρόσβαση</option>
+          <option value="activities">Δραστηριότητες</option>
+          <option value="season">Εποχικότητα</option>
+          <option value="qid">QID</option>
+          <option value="sources">Πηγές</option>
+        </select>
+        <button type="button" class="dp-sort-dir" id="dp-sort-dir" aria-label="Επιλογή στήλης για ταξινόμηση" title="Επιλογή στήλης για ταξινόμηση" disabled>↕</button>
+      </div>
+    </div>
+    <p class="dp-table-status" id="dp-table-status" role="status" aria-live="polite" aria-atomic="true">10 σημεία στον πίνακα.</p>
+  </div>
+  <div class="dp-table-wrap">
+    <table class="dp-table" id="dp-table">
+      <caption class="dp-visually-hidden">Συγκριτικός πίνακας των δέκα σημείων</caption>
+      <thead><tr><th scope="col" aria-sort="none"><button type="button" data-sort="name" data-type="text">Όνομα<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="pe" data-type="text">Περιφερειακή ενότητα<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="height" data-type="num">Ύψος<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="access" data-type="text">Πρόσβαση<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="activities" data-type="text">Δραστηριότητες<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="season" data-type="text">Εποχικότητα<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="qid" data-type="text">QID<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="sources" data-type="num">Πηγές<span class="dp-arrow" aria-hidden="true">↕</span></button></th></tr></thead>
+      <tbody><tr data-slug="edessa" data-name="Καταρράκτες Έδεσσας" data-pe="Πέλλας" data-height="70" data-access="Α" data-region="Κεντρική Μακεδονία" data-season="Όλο τον χρόνο" data-activities="Θέαση Κάρανου, φωτογραφία, περιήγηση πάρκου" data-qid="Q50809609" data-sources="1" data-status="full" data-lat="40.803464" data-lon="22.055301">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/edessa/' | relative_url }}">Καταρράκτες Έδεσσας</a><span class="dp-order">01</span><a class="dp-jump" href="#poi-edessa" aria-label="Καρτέλα 12 πεδίων: Καταρράκτες Έδεσσας">↓ καρτέλα</a></td>
+  <td>Πέλλας<span class="dp-region-inline">Κεντρική Μακεδονία</span></td>
+  <td class="dp-td-height"><strong>70 μ.</strong><span class="dp-src"><a href="https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall" target="_blank" rel="noopener noreferrer">Visit Edessa — Κάρανος</a></span></td>
+  <td><span class="dp-access dp-access-Α" title="Πάρκο Καταρρακτών, σκάλες και διαμορφωμένα σημεία θέασης.">Α</span></td>
+  <td>Θέαση Κάρανου, φωτογραφία, περιήγηση πάρκου</td>
+  <td>Όλο τον χρόνο</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q50809609" target="_blank" rel="noopener noreferrer">Q50809609</a></td>
+  <td class="dp-td-src"><a href="https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="drymona" data-name="Καταρράκτες της Δρυμώνας" data-pe="Εύβοιας" data-height="10" data-access="Α" data-region="Στερεά Ελλάδα" data-season="Άνοιξη · περιορισμένη ροή καλοκαίρι" data-activities="Πεζοπορία, θέαση, φωτογραφία" data-qid="Q96143730" data-sources="1" data-status="full" data-lat="38.872271" data-lon="23.293446">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/drymona/' | relative_url }}">Καταρράκτες της Δρυμώνας</a><span class="dp-order">02</span><a class="dp-jump" href="#poi-drymona" aria-label="Καρτέλα 12 πεδίων: Καταρράκτες της Δρυμώνας">↓ καρτέλα</a></td>
+  <td>Εύβοιας<span class="dp-region-inline">Στερεά Ελλάδα</span></td>
+  <td class="dp-td-height"><strong>10 μ.</strong><span class="dp-src"><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Δρυμώνας</a></span></td>
+  <td><span class="dp-access dp-access-Α" title="Διαμορφωμένο μονοπάτι με ξύλινα κάγκελα και γεφυράκια· περίπου 15 λεπτά.">Α</span></td>
+  <td>Πεζοπορία, θέαση, φωτογραφία</td>
+  <td>Άνοιξη · περιορισμένη ροή καλοκαίρι</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q96143730" target="_blank" rel="noopener noreferrer">Q96143730</a></td>
+  <td class="dp-td-src"><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="polylimnio" data-name="Πολυλίμνιο Μεσσηνίας" data-pe="Μεσσηνίας" data-height="25" data-access="Β" data-region="Πελοπόννησος" data-season="Άνοιξη–φθινόπωρο" data-activities="Πεζοπορία, θέαση λιμνών, φωτογραφία" data-qid="Q16329450" data-sources="1" data-status="full" data-lat="36.98355" data-lon="21.85382">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/polylimnio/' | relative_url }}">Πολυλίμνιο Μεσσηνίας</a><span class="dp-order">03</span><a class="dp-jump" href="#poi-polylimnio" aria-label="Καρτέλα 12 πεδίων: Πολυλίμνιο Μεσσηνίας">↓ καρτέλα</a></td>
+  <td>Μεσσηνίας<span class="dp-region-inline">Πελοπόννησος</span></td>
+  <td class="dp-td-height"><strong>Περίπου 25 μ.</strong><span class="dp-src"><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Πολυλίμνιο</a></span></td>
+  <td><span class="dp-access dp-access-Β" title="Σηματοδοτημένη πορεία περίπου 3 χλμ. δίπλα στο νερό, ~2 ώρες χωρίς στάσεις.">Β</span></td>
+  <td>Πεζοπορία, θέαση λιμνών, φωτογραφία</td>
+  <td>Άνοιξη–φθινόπωρο</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q16329450" target="_blank" rel="noopener noreferrer">Q16329450</a></td>
+  <td class="dp-td-src"><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="man-katsa" data-name="Καταρράκτης Μαν Κάτσα" data-pe="Λέσβου" data-height="15" data-access="Γ" data-region="Βόρειο Αιγαίο" data-season="Χωρίς τεκμηριωμένο πρόγραμμα" data-activities="Θέαση, φωτογραφία, περιήγηση ρέματος" data-qid="Q105529431" data-sources="1" data-status="limited" data-lat="39.27637" data-lon="26.35883">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/man-katsa/' | relative_url }}">Καταρράκτης Μαν Κάτσα</a><span class="dp-order">04</span><a class="dp-jump" href="#poi-man-katsa" aria-label="Καρτέλα 12 πεδίων: Καταρράκτης Μαν Κάτσα">↓ καρτέλα</a></td>
+  <td>Λέσβου<span class="dp-region-inline">Βόρειο Αιγαίο</span></td>
+  <td class="dp-td-height"><strong>Περίπου 15 μ.</strong><span class="dp-src"><a href="https://www.visitlesvos.gr/pois/man-katsa-waterfall/" target="_blank" rel="noopener noreferrer">Visit Lesvos — Μαν Κάτσα</a></span></td>
+  <td><span class="dp-access dp-access-Γ" title="Τοπική πρόσβαση από Μανταμάδο–Πεδή· χωρίς τεκμηριωμένο χρόνο ή χάραξη.">Γ</span></td>
+  <td>Θέαση, φωτογραφία, περιήγηση ρέματος</td>
+  <td>Χωρίς τεκμηριωμένο πρόγραμμα</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q105529431" target="_blank" rel="noopener noreferrer">Q105529431</a></td>
+  <td class="dp-td-src"><a href="https://www.visitlesvos.gr/pois/man-katsa-waterfall/" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="livaditis" data-name="Καταρράκτης Λειβαδίτη" data-pe="Ξάνθης" data-height="60" data-access="Β" data-region="Ανατολική Μακεδονία και Θράκη" data-season="Χειμώνας με πάγο" data-activities="Πεζοπορία σε δάσος, θέαση, φωτογραφία" data-qid="Q109562646" data-sources="1" data-status="limited" data-lat="41.328068" data-lon="24.67222">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/livaditis/' | relative_url }}">Καταρράκτης Λειβαδίτη</a><span class="dp-order">05</span><a class="dp-jump" href="#poi-livaditis" aria-label="Καρτέλα 12 πεδίων: Καταρράκτης Λειβαδίτη">↓ καρτέλα</a></td>
+  <td>Ξάνθης<span class="dp-region-inline">Ανατολική Μακεδονία και Θράκη</span></td>
+  <td class="dp-td-height"><strong>Περίπου 60 μ.</strong><span class="dp-src"><a href="https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou" target="_blank" rel="noopener noreferrer">Δήμος Ξάνθης — Λειβαδίτης / Τραχώνι</a></span></td>
+  <td><span class="dp-access dp-access-Β" title="Μέσω Σταυρούπολης–Λειβαδίτη, δασικός δρόμος και τελικό πεζό τμήμα.">Β</span></td>
+  <td>Πεζοπορία σε δάσος, θέαση, φωτογραφία</td>
+  <td>Χειμώνας με πάγο</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q109562646" target="_blank" rel="noopener noreferrer">Q109562646</a></td>
+  <td class="dp-td-src"><a href="https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="neda" data-name="Καταρράκτης Νέδας" data-pe="Ηλεία και Μεσσηνία" data-height="" data-access="Γ" data-region="Πελοπόννησος" data-season="Χωρίς σταθερό μήνα" data-activities="Θέαση καταρράκτη, πεζοπορία, φωτογραφία" data-qid="Q123279956" data-sources="1" data-status="limited" data-lat="37.39681" data-lon="21.82056">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/neda/' | relative_url }}">Καταρράκτης Νέδας</a><span class="dp-order">06</span><a class="dp-jump" href="#poi-neda" aria-label="Καρτέλα 12 πεδίων: Καταρράκτης Νέδας">↓ καρτέλα</a></td>
+  <td>Ηλεία και Μεσσηνία<span class="dp-region-inline">Πελοπόννησος</span></td>
+  <td class="dp-td-height"><span class="dp-unknown">Δεν έχει διασταυρωθεί</span><span class="dp-src">—</span></td>
+  <td><span class="dp-access dp-access-Γ" title="Επιλέξτε την πρόσβαση προς τον συγκεκριμένο καταρράκτη· επιβεβαιώστε το τελικό μονοπάτι.">Γ</span></td>
+  <td>Θέαση καταρράκτη, πεζοπορία, φωτογραφία</td>
+  <td>Χωρίς σταθερό μήνα</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q123279956" target="_blank" rel="noopener noreferrer">Q123279956</a></td>
+  <td class="dp-td-src"><a href="https://visitpeloponnese.com/el/prdct/neda-apokosmi-empeiria-apo-faraggi-stoys-katarraktes" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="fonias" data-name="Καταρράκτης Φονιά" data-pe="Σαμοθράκης" data-height="" data-access="Γ" data-region="Ανατολική Μακεδονία και Θράκη" data-season="Χωρίς μηνιαίο πρόγραμμα" data-activities="Πεζοπορία, θέαση βαθρών, φωτογραφία" data-qid="Q123279134" data-sources="2" data-status="limited" data-lat="40.48013" data-lon="25.64568">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/fonias/' | relative_url }}">Καταρράκτης Φονιά</a><span class="dp-order">07</span><a class="dp-jump" href="#poi-fonias" aria-label="Καρτέλα 12 πεδίων: Καταρράκτης Φονιά">↓ καρτέλα</a></td>
+  <td>Σαμοθράκης<span class="dp-region-inline">Ανατολική Μακεδονία και Θράκη</span></td>
+  <td class="dp-td-height"><span class="dp-unknown">Δεν έχει διασταυρωθεί</span><span class="dp-src">—</span></td>
+  <td><span class="dp-access dp-access-Γ" title="Δημοτική καταγραφή μονοπατιών· επιβεβαιώστε ποια χάραξη είναι σήμερα ανοικτή.">Γ</span></td>
+  <td>Πεζοπορία, θέαση βαθρών, φωτογραφία</td>
+  <td>Χωρίς μηνιαίο πρόγραμμα</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q123279134" target="_blank" rel="noopener noreferrer">Q123279134</a></td>
+  <td class="dp-td-src"><a href="https://www.emtgreece.com/el/proorismos/bathresfonias-gria-bathra" target="_blank" rel="noopener noreferrer">Πηγή ↗</a><span class="dp-more">+1</span></td>
+</tr><tr data-slug="mylonas" data-name="Καταρράκτης Μυλωνά" data-pe="Λασιθίου" data-height="20" data-access="Α" data-region="Κρήτη" data-season="Χειμώνας και μετά από βροχές" data-activities="Πεζοπορία φαραγγιού, θέαση, φωτογραφία" data-qid="Q123280515" data-sources="2" data-status="full" data-lat="35.03585" data-lon="25.84487">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/mylonas/' | relative_url }}">Καταρράκτης Μυλωνά</a><span class="dp-order">08</span><a class="dp-jump" href="#poi-mylonas" aria-label="Καρτέλα 12 πεδίων: Καταρράκτης Μυλωνά">↓ καρτέλα</a></td>
+  <td>Λασιθίου<span class="dp-region-inline">Κρήτη</span></td>
+  <td class="dp-td-height"><strong>20 μ.</strong><span class="dp-src"><a href="https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon" target="_blank" rel="noopener noreferrer">Δήμος Ιεραπέτρας — Φαράγγι Μυλωνά</a></span></td>
+  <td><span class="dp-access dp-access-Α" title="Πεζό τμήμα περίπου 20 λεπτών από την αφετηρία, με τοπική σήμανση.">Α</span></td>
+  <td>Πεζοπορία φαραγγιού, θέαση, φωτογραφία</td>
+  <td>Χειμώνας και μετά από βροχές</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q123280515" target="_blank" rel="noopener noreferrer">Q123280515</a></td>
+  <td class="dp-td-src"><a href="https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon" target="_blank" rel="noopener noreferrer">Πηγή ↗</a><span class="dp-more">+1</span></td>
+</tr><tr data-slug="valanaris" data-name="Καταρράκτης Βαλανάρη" data-pe="Ανατολικής Αττικής" data-height="6" data-access="Γ" data-region="Αττική" data-season="Όλο τον χρόνο" data-activities="Σύντομη πεζοπορία, θέαση, φωτογραφία" data-qid="Q134572270" data-sources="1" data-status="limited" data-lat="38.036862" data-lon="23.906229">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/valanaris/' | relative_url }}">Καταρράκτης Βαλανάρη</a><span class="dp-order">09</span><a class="dp-jump" href="#poi-valanaris" aria-label="Καρτέλα 12 πεδίων: Καταρράκτης Βαλανάρη">↓ καρτέλα</a></td>
+  <td>Ανατολικής Αττικής<span class="dp-region-inline">Αττική</span></td>
+  <td class="dp-td-height"><strong>6 μ.</strong><span class="dp-src"><a href="https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/" target="_blank" rel="noopener noreferrer">Δήμος Ραφήνας–Πικερμίου — Βαλανάρης</a></span></td>
+  <td><span class="dp-access dp-access-Γ" title="Επιβεβαιώστε το επιτρεπόμενο σημείο καθόδου στο ρέμα· η πινέζα δεν είναι χώρος στάθμευσης.">Γ</span></td>
+  <td>Σύντομη πεζοπορία, θέαση, φωτογραφία</td>
+  <td>Όλο τον χρόνο</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q134572270" target="_blank" rel="noopener noreferrer">Q134572270</a></td>
+  <td class="dp-td-src"><a href="https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr><tr data-slug="pythara" data-name="Καταρράκτες Πυθάρας" data-pe="Άνδρου" data-height="" data-access="Α" data-region="Νότιο Αιγαίο" data-season="Χωρίς ορισμένο μήνα" data-activities="Πεζοπορία, θέαση, φωτογραφία" data-qid="Q134580916" data-sources="1" data-status="limited" data-lat="37.844561" data-lon="24.90286">
+  <td class="dp-td-name"><a href="{{ '/katarraktes/pythara/' | relative_url }}">Καταρράκτες Πυθάρας</a><span class="dp-order">10</span><a class="dp-jump" href="#poi-pythara" aria-label="Καρτέλα 12 πεδίων: Καταρράκτες Πυθάρας">↓ καρτέλα</a></td>
+  <td>Άνδρου<span class="dp-region-inline">Νότιο Αιγαίο</span></td>
+  <td class="dp-td-height"><span class="dp-unknown">Δεν έχει διασταυρωθεί</span><span class="dp-src">—</span></td>
+  <td><span class="dp-access dp-access-Α" title="Πεζοπορία περίπου 10 λεπτών από τον κεντρικό δρόμο των Αποικίων.">Α</span></td>
+  <td>Πεζοπορία, θέαση, φωτογραφία</td>
+  <td>Χωρίς ορισμένο μήνα</td>
+  <td class="dp-td-qid"><a href="https://www.wikidata.org/wiki/Q134580916" target="_blank" rel="noopener noreferrer">Q134580916</a></td>
+  <td class="dp-td-src"><a href="https://andros.gr/gr/component/content/article.html?id=51:axiotheata" target="_blank" rel="noopener noreferrer">Πηγή ↗</a></td>
+</tr></tbody>
+    </table>
+  </div>
+  <p class="dp-table-empty" id="dp-table-empty" hidden></p>
+  <p class="dp-table-foot">Η περιφέρεια προκύπτει από την περιφερειακή ενότητα κάθε σημείου. Οι στήλες δραστηριοτήτων και εποχικότητας συνοψίζουν τα κείμενα «Τι θα δείτε» και «Νερό και εποχή» κάθε σελίδας σημείου· δεν προσθέτουν νέα πηγή. Η κατάταξη πρόσβασης Α/Β/Γ είναι σύνθεση των περιγραφών «Πώς φτάνετε» και όχι επίσημη κατάταξη φορέα.</p>
+</section>
+
+<section class="dp-section" id="kartes" aria-labelledby="kartes-title">
+  <div class="dp-section-head">
+    <h2 id="kartes-title">Πρότυπη δομή 12 πεδίων</h2>
+    <p class="dp-kicker">Ένα αρχείο ανά σημείο · ίδια πεδία παντού</p>
+  </div>
+  <p class="dp-note">Κάθε καρτέλα ακολουθεί την ίδια σειρά πεδίων, ώστε τα σημεία να συγκρίνονται χωρίς να κρύβονται διαφορές. Η κατάσταση τεκμηρίωσης δεν αξιολογεί τον τόπο· αξιολογεί το αρχείο του.</p>
+  <div class="dp-method">
+    <div>
+      <h3>Πώς ορίζεται το «επαρκής»</h3>
+      <p><strong>Επαρκής</strong> σημαίνει ότι το ύψος ή τα βασικά χαρακτηριστικά διασταυρώνονται σε τουλάχιστον δύο ανεξάρτητες πηγές ή σε επιστημονική μελέτη. <strong>Περιορισμένη</strong> σημαίνει μία μόνο πηγή ή απουσία αριθμητικού ύψους.</p>
+    </div>
+    <div>
+      <h3>Γιατί η ειλικρίνεια είναι πλεονέκτημα</h3>
+      <p>Ένα κενό δηλώνεται και δεν συμπληρώνεται με εκτίμηση. Έτσι ο αναγνώστης ξέρει τι μπορεί να ελέγξει, και η σύγκριση παραμένει ακαδημαϊκά έντιμη αντί να φαίνεται πλήρης.</p>
+    </div>
+  </div>
+  <div class="dp-cards"><details class="dp-card" id="poi-edessa">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">01</span><a href="{{ '/katarraktes/edessa/' | relative_url }}">Καταρράκτες Έδεσσας</a></span>
+    <span class="dp-card-meta">Πέλλας · Κεντρική Μακεδονία</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">70 μ.</span>
+      <span class="dp-status dp-status-full">επαρκής</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/edessa/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτες Έδεσσας</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Πέλλας</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Κεντρική Μακεδονία</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">70 μ.</strong><span class="dp-field-note">Αφορά τον Κάρανο, όχι το άθροισμα των καταρρακτών της Έδεσσας.</span><span class="dp-field-src">Πηγή: <a href="https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall" target="_blank" rel="noopener noreferrer">Visit Edessa — Κάρανος ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Καταρράκτες μέσα στο αστικό τοπίο</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Α">Α</span> Πάρκο Καταρρακτών, σκάλες και διαμορφωμένα σημεία θέασης.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Θέαση Κάρανου, φωτογραφία, περιήγηση πάρκου</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Όλο τον χρόνο<span class="dp-field-note">Δεν δίνεται σταθερή μηνιαία παροχή· ελέγξτε την τοπική ενημέρωση.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">40.80346, 22.05530</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=40.803464&amp;mlon=22.055301#map=15/40.803464/22.055301" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q50809609" target="_blank" rel="noopener noreferrer">Q50809609 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall" target="_blank" rel="noopener noreferrer">Visit Edessa — Κάρανος ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-full">επαρκής</span><span class="dp-tier">Επιστημονική μελέτη + επίσημη πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-full">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Η Έδεσσα είναι το μόνο σημείο της δεκάδας με επιστημονική μελέτη γεωτόπου (Greek Scapes). Το ύψος των 70 μ. αφορά τον Κάρανο και διασταυρώνεται με την επίσημη δημοτική περιγραφή.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Λήμμα: «Καταρράκτες Έδεσσας»</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q50809609" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B5%CF%82_%CE%88%CE%B4%CE%B5%CF%83%CF%83%CE%B1%CF%82&amp;action=edit" target="_blank" rel="noopener noreferrer">Επεξεργασία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-drymona">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">02</span><a href="{{ '/katarraktes/drymona/' | relative_url }}">Καταρράκτες της Δρυμώνας</a></span>
+    <span class="dp-card-meta">Εύβοιας · Στερεά Ελλάδα</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">10 μ.</span>
+      <span class="dp-status dp-status-full">επαρκής</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/drymona/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτες της Δρυμώνας</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Εύβοιας</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Στερεά Ελλάδα</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">10 μ.</strong><span class="dp-field-note">Η μεγαλύτερη πτώση όπως αναφέρεται στη σελίδα του ΕΟΤ.</span><span class="dp-field-src">Πηγή: <a href="https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Δρυμώνας ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Μικρό φαράγγι με καταρράκτες και λιμνούλες</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Α">Α</span> Διαμορφωμένο μονοπάτι με ξύλινα κάγκελα και γεφυράκια· περίπου 15 λεπτά.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Πεζοπορία, θέαση, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Άνοιξη · περιορισμένη ροή καλοκαίρι<span class="dp-field-note">Άνοιξη με πλουσιότερα νερά· η ροή περιορίζεται στην καρδιά του καλοκαιριού.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">38.87227, 23.29345</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=38.872271&amp;mlon=23.293446#map=15/38.872271/23.293446" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q96143730" target="_blank" rel="noopener noreferrer">Q96143730 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Δρυμώνας ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-full">επαρκής</span><span class="dp-tier">Επίσημη πηγή ΕΟΤ + λήμμα</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-full">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Το ύψος των 10 μ. και η προσέγγιση των ~15′ προέρχονται από τον ΕΟΤ και διασταυρώνονται με το λήμμα. Δεν υπάρχει επιστημονική μελέτη γεωτόπου για το σημείο.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Λήμμα: «Καταρράκτες της Δρυμώνας»</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q96143730" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B5%CF%82_%CF%84%CE%B7%CF%82_%CE%94%CF%81%CF%85%CE%BC%CF%8E%CE%BD%CE%B1%CF%82&amp;action=edit" target="_blank" rel="noopener noreferrer">Επεξεργασία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-polylimnio">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">03</span><a href="{{ '/katarraktes/polylimnio/' | relative_url }}">Πολυλίμνιο Μεσσηνίας</a></span>
+    <span class="dp-card-meta">Μεσσηνίας · Πελοπόννησος</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">Περίπου 25 μ.</span>
+      <span class="dp-status dp-status-full">επαρκής</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/polylimnio/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Πολυλίμνιο Μεσσηνίας</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Μεσσηνίας</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Πελοπόννησος</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">Περίπου 25 μ.</strong><span class="dp-field-note">Αφορά την Καδούλα μέσα στο σύμπλεγμα, όχι ενιαίο ύψος όλου του Πολυλιμνίου.</span><span class="dp-field-src">Πηγή: <a href="https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Πολυλίμνιο ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Σύμπλεγμα φυσικών λιμνών και καταρρακτών</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Β">Β</span> Σηματοδοτημένη πορεία περίπου 3 χλμ. δίπλα στο νερό, ~2 ώρες χωρίς στάσεις.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Πεζοπορία, θέαση λιμνών, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Άνοιξη–φθινόπωρο<span class="dp-field-note">Αποφυγή χειμώνα και αρχών άνοιξης όταν τα νερά είναι ορμητικά και τα βράχια γλιστερά.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">36.98355, 21.85382</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=36.98355&amp;mlon=21.85382#map=15/36.98355/21.85382" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q16329450" target="_blank" rel="noopener noreferrer">Q16329450 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Πολυλίμνιο ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-full">επαρκής</span><span class="dp-tier">Επίσημη πηγή ΕΟΤ + περιφερειακή πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-full">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Το ύψος αφορά μόνο την Καδούλα· η πορεία και η εποχικότητα τεκμηριώνονται από τον ΕΟΤ και την περιφερειακή σελίδα. Δεν υπάρχει επιστημονική μελέτη γεωτόπου.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Λήμμα: «Πολυλίμνιο Μεσσηνίας»</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q16329450" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%A0%CE%BF%CE%BB%CF%85%CE%BB%CE%AF%CE%BC%CE%BD%CE%B9%CE%BF_%CE%9C%CE%B5%CF%83%CF%83%CE%B7%CE%BD%CE%AF%CE%B1%CF%82&amp;action=edit" target="_blank" rel="noopener noreferrer">Επεξεργασία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-man-katsa">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">04</span><a href="{{ '/katarraktes/man-katsa/' | relative_url }}">Καταρράκτης Μαν Κάτσα</a></span>
+    <span class="dp-card-meta">Λέσβου · Βόρειο Αιγαίο</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">Περίπου 15 μ.</span>
+      <span class="dp-status dp-status-limited">περιορισμένη</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/man-katsa/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτης Μαν Κάτσα</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Λέσβου</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Βόρειο Αιγαίο</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">Περίπου 15 μ.</strong><span class="dp-field-note">Το ύψος του γκρεμού από τον οποίο πέφτει το νερό.</span><span class="dp-field-src">Πηγή: <a href="https://www.visitlesvos.gr/pois/man-katsa-waterfall/" target="_blank" rel="noopener noreferrer">Visit Lesvos — Μαν Κάτσα ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Ρέμα και μικρή φυσική λίμνη σε ηφαιστειακά πετρώματα</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Γ">Γ</span> Τοπική πρόσβαση από Μανταμάδο–Πεδή· χωρίς τεκμηριωμένο χρόνο ή χάραξη.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Θέαση, φωτογραφία, περιήγηση ρέματος</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Χωρίς τεκμηριωμένο πρόγραμμα<span class="dp-field-note">Απαιτείται τοπική ενημέρωση για παρουσία και ροή νερού.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">39.27637, 26.35883</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=39.27637&amp;mlon=26.35883#map=15/39.27637/26.35883" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q105529431" target="_blank" rel="noopener noreferrer">Q105529431 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://www.visitlesvos.gr/pois/man-katsa-waterfall/" target="_blank" rel="noopener noreferrer">Visit Lesvos — Μαν Κάτσα ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-limited">περιορισμένη</span><span class="dp-tier">Τουριστική πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-limited">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Μία μόνο πηγή (Visit Lesvos) τεκμηριώνει το ύψος. Δεν υπάρχει ανεξάρτητη διασταύρωση, αριθμητικό ύψος από δεύτερη πηγή ή επιστημονική μελέτη.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Λήμμα: «Μαν Κάτσα»</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q105529431" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9C%CE%B1%CE%BD_%CE%9A%CE%AC%CF%84%CF%83%CE%B1&amp;action=edit" target="_blank" rel="noopener noreferrer">Επεξεργασία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-livaditis">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">05</span><a href="{{ '/katarraktes/livaditis/' | relative_url }}">Καταρράκτης Λειβαδίτη</a></span>
+    <span class="dp-card-meta">Ξάνθης · Ανατολική Μακεδονία και Θράκη</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">Περίπου 60 μ.</span>
+      <span class="dp-status dp-status-limited">περιορισμένη</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/livaditis/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτης Λειβαδίτη</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Ξάνθης</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Ανατολική Μακεδονία και Θράκη</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">Περίπου 60 μ.</strong><span class="dp-field-note">Η κατακόρυφη πτώση όπως περιγράφεται από τον Δήμο Ξάνθης.</span><span class="dp-field-src">Πηγή: <a href="https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou" target="_blank" rel="noopener noreferrer">Δήμος Ξάνθης — Λειβαδίτης / Τραχώνι ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Δασικό τοπίο με κατακόρυφη πτώση νερού</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Β">Β</span> Μέσω Σταυρούπολης–Λειβαδίτη, δασικός δρόμος και τελικό πεζό τμήμα.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Πεζοπορία σε δάσος, θέαση, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Χειμώνας με πάγο<span class="dp-field-note">Ο καταρράκτης μπορεί να παγώσει· η χειμερινή εικόνα δεν σημαίνει πάντα εφικτή πρόσβαση.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">41.32807, 24.67222</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=41.328068&amp;mlon=24.67222#map=15/41.328068/24.67222" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q109562646" target="_blank" rel="noopener noreferrer">Q109562646 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou" target="_blank" rel="noopener noreferrer">Δήμος Ξάνθης — Λειβαδίτης / Τραχώνι ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-limited">περιορισμένη</span><span class="dp-tier">Δημοτική πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-limited">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Μία δημοτική πηγή τεκμηριώνει το ύψος και τη διαδρομή. Δεν υπάρχει ελληνικό λήμμα Wikipedia ούτε ανεξάρτητη μέτρηση.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Δεν υπάρχει ελληνικό λήμμα</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q109562646" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%9B%CE%B5%CE%B9%CE%B2%CE%B1%CE%B4%CE%AF%CF%84%CE%B7&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">Δημιουργία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-neda">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">06</span><a href="{{ '/katarraktes/neda/' | relative_url }}">Καταρράκτης Νέδας</a></span>
+    <span class="dp-card-meta">Ηλεία και Μεσσηνία · Πελοπόννησος</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">Δεν έχει διασταυρωθεί</span>
+      <span class="dp-status dp-status-limited">περιορισμένη</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/neda/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτης Νέδας</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Ηλεία και Μεσσηνία</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Πελοπόννησος</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">Δεν έχει διασταυρωθεί</strong><span class="dp-field-note">Δεν έχει διασταυρωθεί αριθμητική τιμή για τον συγκεκριμένο καταρράκτη της καταχώρισης.</span><span class="dp-field-src">Πηγή: Καμία διασταυρωμένη τιμή</span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Καταρράκτης στο ποτάμιο τοπίο της Νέδας</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Γ">Γ</span> Επιλέξτε την πρόσβαση προς τον συγκεκριμένο καταρράκτη· επιβεβαιώστε το τελικό μονοπάτι.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Θέαση καταρράκτη, πεζοπορία, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Χωρίς σταθερό μήνα<span class="dp-field-note">Απαιτείται ενημέρωση για ροή και κατάσταση φαραγγιού.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">37.39681, 21.82056</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=37.39681&amp;mlon=21.82056#map=15/37.39681/21.82056" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q123279956" target="_blank" rel="noopener noreferrer">Q123279956 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://visitpeloponnese.com/el/prdct/neda-apokosmi-empeiria-apo-faraggi-stoys-katarraktes" target="_blank" rel="noopener noreferrer">Visit Peloponnese — Νέδα ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-limited">περιορισμένη</span><span class="dp-tier">Περιφερειακή τουριστική πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-limited">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Η Νέδα βρίσκεται στην ίδια κατηγορία με τον Μάστορα: τεκμηρίωση επιπέδου περιοδικού πεδίου, χωρίς αριθμητικό ύψος. Η θέση είναι οριακή Ηλείας–Μεσσηνίας· η καταχώριση αφορά ένα σημείο, όχι όλο το φαράγγι.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Δεν υπάρχει ελληνικό λήμμα</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q123279956" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%9D%CE%AD%CE%B4%CE%B1%CF%82&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">Δημιουργία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-fonias">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">07</span><a href="{{ '/katarraktes/fonias/' | relative_url }}">Καταρράκτης Φονιά</a></span>
+    <span class="dp-card-meta">Σαμοθράκης · Ανατολική Μακεδονία και Θράκη</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">Δεν έχει διασταυρωθεί</span>
+      <span class="dp-status dp-status-limited">περιορισμένη</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/fonias/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτης Φονιά</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Σαμοθράκης</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Ανατολική Μακεδονία και Θράκη</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">Δεν έχει διασταυρωθεί</strong><span class="dp-field-note">Δεν αποδίδεται ύψος άλλης πτώσης του ίδιου ρέματος στο συγκεκριμένο σημείο.</span><span class="dp-field-src">Πηγή: Καμία διασταυρωμένη τιμή</span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Ρέμα με καταρράκτες και βάθρες</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Γ">Γ</span> Δημοτική καταγραφή μονοπατιών· επιβεβαιώστε ποια χάραξη είναι σήμερα ανοικτή.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Πεζοπορία, θέαση βαθρών, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Χωρίς μηνιαίο πρόγραμμα<span class="dp-field-note">Έλεγχος ροής και τοπικών συνθηκών πριν από την επίσκεψη.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">40.48013, 25.64568</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=40.48013&amp;mlon=25.64568#map=15/40.48013/25.64568" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q123279134" target="_blank" rel="noopener noreferrer">Q123279134 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://www.emtgreece.com/el/proorismos/bathresfonias-gria-bathra" target="_blank" rel="noopener noreferrer">Περιφέρεια ΑΜΘ — Βάθρες Φονιά ↗</a></li><li><a href="https://samothraki.gr/2017/06/01/" target="_blank" rel="noopener noreferrer">Δήμος Σαμοθράκης — καταγραφή μονοπατιών ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-limited">περιορισμένη</span><span class="dp-tier">Περιφερειακή + δημοτική πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-limited">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Δύο επίσημες σελίδες περιγράφουν το σημείο, αλλά καμία δεν δίνει ύψος. Η χάραξη πρόσβασης χρειάζεται τοπική επιβεβαίωση.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Δεν υπάρχει ελληνικό λήμμα</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q123279134" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%A6%CE%BF%CE%BD%CE%B9%CE%AC&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">Δημιουργία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-mylonas">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">08</span><a href="{{ '/katarraktes/mylonas/' | relative_url }}">Καταρράκτης Μυλωνά</a></span>
+    <span class="dp-card-meta">Λασιθίου · Κρήτη</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">20 μ.</span>
+      <span class="dp-status dp-status-full">επαρκής</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/mylonas/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτης Μυλωνά</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Λασιθίου</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Κρήτη</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">20 μ.</strong><span class="dp-field-note">Η τιμή που δημοσιεύει ο Δήμος Ιεραπέτρας για τον καταρράκτη στο φαράγγι Μυλωνά.</span><span class="dp-field-src">Πηγή: <a href="https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon" target="_blank" rel="noopener noreferrer">Δήμος Ιεραπέτρας — Φαράγγι Μυλωνά ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Καταρράκτης σε φαράγγι της ανατολικής Κρήτης</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Α">Α</span> Πεζό τμήμα περίπου 20 λεπτών από την αφετηρία, με τοπική σήμανση.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Πεζοπορία φαραγγιού, θέαση, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Χειμώνας και μετά από βροχές<span class="dp-field-note">Εντονότερο θέαμα τον χειμώνα· επιλέξτε ημέρα με βάση τον καιρό.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">35.03585, 25.84487</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=35.03585&amp;mlon=25.84487#map=15/35.03585/25.84487" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q123280515" target="_blank" rel="noopener noreferrer">Q123280515 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon" target="_blank" rel="noopener noreferrer">Δήμος Ιεραπέτρας — Φαράγγι Μυλωνά ↗</a></li><li><a href="https://www.incrediblecrete.gr/place/gorge-of-mylonas/" target="_blank" rel="noopener noreferrer">Incredible Crete — Φαράγγι Μυλωνά ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-full">επαρκής</span><span class="dp-tier">Δημοτική + περιφερειακή πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-full">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Το ύψος των 20 μ. προέρχεται από τον Δήμο Ιεραπέτρας και η πορεία από την Περιφέρεια Κρήτης. Δύο ανεξάρτητες επίσημες πηγές, χωρίς επιστημονική μελέτη.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Δεν υπάρχει ελληνικό λήμμα</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q123280515" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%9C%CF%85%CE%BB%CF%89%CE%BD%CE%AC&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">Δημιουργία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-valanaris">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">09</span><a href="{{ '/katarraktes/valanaris/' | relative_url }}">Καταρράκτης Βαλανάρη</a></span>
+    <span class="dp-card-meta">Ανατολικής Αττικής · Αττική</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">6 μ.</span>
+      <span class="dp-status dp-status-limited">περιορισμένη</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/valanaris/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτης Βαλανάρη</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Ανατολικής Αττικής</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Αττική</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">6 μ.</strong><span class="dp-field-note">Το ύψος που αναφέρει ο Δήμος Ραφήνας–Πικερμίου.</span><span class="dp-field-src">Πηγή: <a href="https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/" target="_blank" rel="noopener noreferrer">Δήμος Ραφήνας–Πικερμίου — Βαλανάρης ↗</a></span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Καταρράκτης στο ρέμα Βαλανάρη, στο Ντράφι</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Γ">Γ</span> Επιβεβαιώστε το επιτρεπόμενο σημείο καθόδου στο ρέμα· η πινέζα δεν είναι χώρος στάθμευσης.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Σύντομη πεζοπορία, θέαση, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Όλο τον χρόνο<span class="dp-field-note">Νερό όλο τον χρόνο· σε έντονη βροχόπτωση το ρέμα γίνεται χείμαρρος.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">38.03686, 23.90623</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=38.036862&amp;mlon=23.906229#map=15/38.036862/23.906229" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q134572270" target="_blank" rel="noopener noreferrer">Q134572270 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/" target="_blank" rel="noopener noreferrer">Δήμος Ραφήνας–Πικερμίου — Βαλανάρης ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-limited">περιορισμένη</span><span class="dp-tier">Δημοτική πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-limited">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Μία δημοτική πηγή τεκμηριώνει το ύψος των 6 μ. Δεν υπάρχει δεύτερη μέτρηση ή λήμμα Wikipedia· η πρόσβαση απαιτεί τοπική επιβεβαίωση.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Δεν υπάρχει ελληνικό λήμμα</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q134572270" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%92%CE%B1%CE%BB%CE%B1%CE%BD%CE%AC%CF%81%CE%B7&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">Δημιουργία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details><details class="dp-card" id="poi-pythara">
+  <summary>
+    <span class="dp-card-title"><span class="dp-num">10</span><a href="{{ '/katarraktes/pythara/' | relative_url }}">Καταρράκτες Πυθάρας</a></span>
+    <span class="dp-card-meta">Άνδρου · Νότιο Αιγαίο</span>
+    <span class="dp-card-badges">
+      <span class="dp-chip">Δεν έχει διασταυρωθεί</span>
+      <span class="dp-status dp-status-limited">περιορισμένη</span>
+    </span>
+  </summary>
+  <div class="dp-card-body">
+    <p class="dp-card-cta"><a class="dp-btn" href="{{ '/katarraktes/pythara/' | relative_url }}">Πλήρης σελίδα καταρράκτη →</a></p>
+    <dl class="dp-fields">
+      <div><dt>1 · Όνομα</dt><dd>Καταρράκτες Πυθάρας</dd></div>
+      <div><dt>2 · Περιφερειακή ενότητα</dt><dd>Άνδρου</dd></div>
+      <div><dt>3 · Περιφέρεια</dt><dd>Νότιο Αιγαίο</dd></div>
+      <div class="dp-field-wide"><dt>4 · Ύψος και πηγή ύψους</dt><dd><strong class="dp-big">Δεν έχει διασταυρωθεί</strong><span class="dp-field-note">Ο Δήμος Άνδρου περιγράφει μικρούς καταρράκτες χωρίς αριθμητικό ύψος πτώσης.</span><span class="dp-field-src">Πηγή: Καμία διασταυρωμένη τιμή</span></dd></div>
+      <div><dt>5 · Μορφή πτώσης</dt><dd>Καταπράσινη ρεματιά με μικρούς καταρράκτες και λιμνούλες</dd></div>
+      <div><dt>6 · Πρόσβαση</dt><dd><span class="dp-access dp-access-Α">Α</span> Πεζοπορία περίπου 10 λεπτών από τον κεντρικό δρόμο των Αποικίων.</dd></div>
+      <div><dt>7 · Δραστηριότητες</dt><dd>Πεζοπορία, θέαση, φωτογραφία</dd></div>
+      <div><dt>8 · Εποχικότητα</dt><dd>Χωρίς ορισμένο μήνα<span class="dp-field-note">Έλεγχος της τρέχουσας κατάστασης του μονοπατιού.</span></dd></div>
+      <div><dt>9 · Συντεταγμένες</dt><dd><span class="dp-mono">37.84456, 24.90286</span><a class="dp-mini" href="https://www.openstreetmap.org/?mlat=37.844561&amp;mlon=24.90286#map=15/37.844561/24.90286" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a></dd></div>
+      <div><dt>10 · QID</dt><dd><a href="https://www.wikidata.org/wiki/Q134580916" target="_blank" rel="noopener noreferrer">Q134580916 ↗</a></dd></div>
+      <div class="dp-field-wide"><dt>11 · Πηγές</dt><dd><ul class="dp-src-list"><li><a href="https://andros.gr/gr/component/content/article.html?id=51:axiotheata" target="_blank" rel="noopener noreferrer">Δήμος Άνδρου — Πυθάρα ↗</a></li></ul></dd></div>
+      <div class="dp-field-wide"><dt>12 · Κατάσταση τεκμηρίωσης</dt><dd><span class="dp-status dp-status-limited">περιορισμένη</span><span class="dp-tier">Δημοτική πηγή</span></dd></div>
+    </dl>
+    <div class="dp-doc-box dp-doc-limited">
+      <h3>Δήλωση τεκμηρίωσης</h3>
+      <p>Μία δημοτική πηγή χωρίς αριθμητικό ύψος. Η πρόσβαση περιγράφεται σε 10′, αλλά η κατάσταση του μονοπατιού δεν πιστοποιείται.</p>
+    </div>
+    <div class="dp-wiki">
+      <p class="dp-wiki-note">Δεν υπάρχει ελληνικό λήμμα</p>
+      <div class="dp-wiki-buttons">
+        <a class="dp-btn dp-btn-ghost" href="https://www.wikidata.org/wiki/Q134580916" target="_blank" rel="noopener noreferrer">QID στο Wikidata ↗</a>
+        <a class="dp-btn" href="https://el.wikipedia.org/w/index.php?title=%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B5%CF%82_%CE%A0%CF%85%CE%B8%CE%AC%CF%81%CE%B1%CF%82&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener noreferrer">Δημιουργία λήμματος ↗</a>
+      </div>
+    </div>
+  </div>
+</details></div>
+</section>
+
+<section class="dp-section" id="vivliografia" aria-labelledby="vivliografia-title">
+  <div class="dp-section-head">
+    <h2 id="vivliografia-title">Βιβλιογραφία</h2>
+    <p class="dp-kicker">Και οι 10 πηγές σε ένα σημείο</p>
+  </div>
+  <p class="dp-note">Μία κύρια πηγή αντιστοιχεί σε κάθε σημείο. Η αξιολόγηση αφορά το τι μπορεί να στηρίξει η πηγή, όχι τη φήμη του φορέα. Οι δευτερεύουσες πηγές (Wikidata, Wikipedia, Commons) αναφέρονται χωριστά.</p>
+  <div class="dp-table-wrap">
+    <table class="dp-table dp-bib-table">
+      <caption class="dp-visually-hidden">Οι δέκα κύριες πηγές με σύντομη αξιολόγηση</caption>
+      <thead><tr><th scope="col">#</th><th scope="col">Πηγή</th><th scope="col">Είδος</th><th scope="col">Τι τεκμηριώνει</th><th scope="col">Αξιολόγηση</th></tr></thead>
+      <tbody><tr>
+  <td class="dp-bib-num">01</td>
+  <td><a href="https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall" target="_blank" rel="noopener noreferrer">Visit Edessa — Κάρανος</a><span class="dp-bib-site">Πέλλας</span></td>
+  <td>Δημοτική τουριστική πύλη</td>
+  <td>Ύψος 70 μ. για τον Κάρανο, διαδρομή και σημεία θέασης</td>
+  <td>Επίσημη, εστιασμένη στο σημείο. Δεν είναι επιστημονική μελέτη.</td>
+</tr><tr>
+  <td class="dp-bib-num">02</td>
+  <td><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Δρυμώνας</a><span class="dp-bib-site">Εύβοιας</span></td>
+  <td>Εθνική τουριστική πύλη (ΕΟΤ)</td>
+  <td>Ύψος 10 μ., μονοπάτι ~15′, εποχικότητα ροής</td>
+  <td>Επίσημη εθνική πηγή με συγκεκριμένα στοιχεία πρόσβασης. Καλύπτει το σημείο, όχι τη γεωλογία του.</td>
+</tr><tr>
+  <td class="dp-bib-num">03</td>
+  <td><a href="https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia" target="_blank" rel="noopener noreferrer">Visit Greece / ΕΟΤ — Πολυλίμνιο</a><span class="dp-bib-site">Μεσσηνίας</span></td>
+  <td>Εθνική τουριστική πύλη (ΕΟΤ)</td>
+  <td>Πορεία ~3 χλμ./2 ώρες, εποχικός περιορισμός, ύψος Καδούλας</td>
+  <td>Η πληρέστερη περιγραφή πρόσβασης στη δεκάδα. Το ύψος δεν αφορά όλο το σύμπλεγμα.</td>
+</tr><tr>
+  <td class="dp-bib-num">04</td>
+  <td><a href="https://www.visitlesvos.gr/pois/man-katsa-waterfall/" target="_blank" rel="noopener noreferrer">Visit Lesvos — Μαν Κάτσα</a><span class="dp-bib-site">Λέσβου</span></td>
+  <td>Δημοτική τουριστική πύλη</td>
+  <td>Ύψος γκρεμού ~15 μ., θέση κοντά στην Πεδή</td>
+  <td>Χρήσιμη για τον εντοπισμό, μοναδική για το ύψος. Χρειάζεται τοπική επιβεβαίωση της πρόσβασης.</td>
+</tr><tr>
+  <td class="dp-bib-num">05</td>
+  <td><a href="https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou" target="_blank" rel="noopener noreferrer">Δήμος Ξάνθης — Λειβαδίτης / Τραχώνι</a><span class="dp-bib-site">Ξάνθης</span></td>
+  <td>Δημοτική πηγή</td>
+  <td>Ύψος ~60 μ., δασική προσέγγιση, χειμερινός πάγος</td>
+  <td>Η μόνη τεκμηρίωση του ύψους. Δεν συνοδεύεται από λήμμα ή δεύτερη μέτρηση.</td>
+</tr><tr>
+  <td class="dp-bib-num">06</td>
+  <td><a href="https://visitpeloponnese.com/el/prdct/neda-apokosmi-empeiria-apo-faraggi-stoys-katarraktes" target="_blank" rel="noopener noreferrer">Visit Peloponnese — Νέδα</a><span class="dp-bib-site">Ηλεία και Μεσσηνία</span></td>
+  <td>Περιφερειακή τουριστική πύλη</td>
+  <td>Περιγραφή του σημείου, χωρίς αριθμητικό ύψος</td>
+  <td>Επίπεδο περιοδικού πεδίου: καλή περιγραφή τοπίου, καμία μετρήσιμη τιμή. Δεν επαρκεί για τεχνική σύγκριση.</td>
+</tr><tr>
+  <td class="dp-bib-num">07</td>
+  <td><a href="https://www.emtgreece.com/el/proorismos/bathresfonias-gria-bathra" target="_blank" rel="noopener noreferrer">Περιφέρεια ΑΜΘ — Βάθρες Φονιά</a><span class="dp-bib-site">Σαμοθράκης</span></td>
+  <td>Περιφερειακή + δημοτική πηγή</td>
+  <td>Περιγραφή βαθρών και μονοπατιού, χωρίς ύψος</td>
+  <td>Δύο επίσημες πηγές για την πρόσβαση, καμία μετρήσιμη τιμή για την πτώση.</td>
+</tr><tr>
+  <td class="dp-bib-num">08</td>
+  <td><a href="https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon" target="_blank" rel="noopener noreferrer">Δήμος Ιεραπέτρας — Φαράγγι Μυλωνά</a><span class="dp-bib-site">Λασιθίου</span></td>
+  <td>Δημοτική + περιφερειακή πηγή</td>
+  <td>Ύψος 20 μ., πεζή προσέγγιση ~20′, σχέση με το φαράγγι</td>
+  <td>Δύο επίσημες πηγές συμφωνούν για την πρόσβαση· το ύψος παραμένει μία δημοτική τιμή χωρίς ανεξάρτητη μέτρηση.</td>
+</tr><tr>
+  <td class="dp-bib-num">09</td>
+  <td><a href="https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/" target="_blank" rel="noopener noreferrer">Δήμος Ραφήνας–Πικερμίου — Βαλανάρης</a><span class="dp-bib-site">Ανατολικής Αττικής</span></td>
+  <td>Δημοτική πηγή</td>
+  <td>Ύψος 6 μ., εποχική συμπεριφορά του ρέματος</td>
+  <td>Επαρκής για μια σύντομη καταχώριση, ανεπαρκής για σύγκριση· καμία ανεξάρτητη πηγή.</td>
+</tr><tr>
+  <td class="dp-bib-num">10</td>
+  <td><a href="https://andros.gr/gr/component/content/article.html?id=51:axiotheata" target="_blank" rel="noopener noreferrer">Δήμος Άνδρου — Πυθάρα</a><span class="dp-bib-site">Άνδρου</span></td>
+  <td>Δημοτική πηγή</td>
+  <td>Περιγραφή ρεματιάς και μονοπατιού ~10′, χωρίς ύψος</td>
+  <td>Καλή για προσανατολισμό, χωρίς μετρήσιμο ύψος. Δεν επιτρέπει σύγκριση με τα άλλα σημεία.</td>
+</tr></tbody>
+    </table>
+  </div>
+  <div class="dp-secondary">
+    <div>
+      <h3>Δευτερεύουσες πηγές</h3>
+      <ul>
+        <li><strong>Wikidata</strong> — 10 QID· συντεταγμένες και βασικοί ισχυρισμοί.</li>
+        <li><strong>Ελληνική Wikipedia</strong> — 4 λήμματα (Έδεσσα, Δρυμώνα, Πολυλίμνιο, Μαν Κάτσα).</li>
+        <li><strong>Wikimedia Commons</strong> — 10 φωτογραφίες με άδεια και δημιουργό.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Τι δεν είναι πηγή</h3>
+      <p>Οι λέξεις-κλειδιά δραστηριοτήτων και εποχικότητας δεν προσθέτουν νέα πηγή: συνοψίζουν τα κείμενα «Τι θα δείτε» και «Νερό και εποχή» των σελίδων σημείων. Η σελίδα δεν χρησιμοποιεί εκτιμήσεις χωρίς παραπομπή.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="dp-footer">
+  <p><strong>Τα δεδομένα</strong> · Τελευταία ενημέρωση: 3 Νοεμβρίου 2026 · Έλεγχος πηγών σημείων: 24 Οκτωβρίου 2026</p>
+  <p>Όλες οι τιμές προέρχονται από τα αρχεία και τις σελίδες του ιστοτόπου. Οι συντεταγμένες από το Wikidata (P625), όπως τις χρησιμοποιεί και ο χάρτης του ιστοτόπου.</p>
+</footer>
+</article>
+<script>
+(function () {
+  "use strict";
+
+  var table = document.getElementById("dp-table");
+  if (!table) return;
+
+  var tbody = table.querySelector("tbody");
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+  var tableStatus = document.getElementById("dp-table-status");
+  var search = document.getElementById("dp-search");
+  var searchClear = document.getElementById("dp-search-clear");
+  var sortSelect = document.getElementById("dp-sort");
+  var sortDirBtn = document.getElementById("dp-sort-dir");
+  var emptyNote = document.getElementById("dp-table-empty");
+  var originalOrder = rows.slice();
+  var query = "";
+
+  /* Sorting */
+  var sortState = { key: null, dir: 1 };
+  var accessRank = { "\u0391": 1, "\u0392": 2, "\u0393": 3 };
+
+  function valueFor(row, key) {
+    if (key === "height") {
+      var h = row.getAttribute("data-height");
+      return h === "" || h === null ? null : Number(h);
+    }
+    if (key === "sources") return Number(row.getAttribute("data-sources") || 0);
+    if (key === "access") return accessRank[row.getAttribute("data-access")] || 9;
+    return row.getAttribute("data-" + key) || "";
+  }
+
+  function compareRows(a, b) {
+    var key = sortState.key;
+    var dir = sortState.dir;
+    var va = valueFor(a, key);
+    var vb = valueFor(b, key);
+    var order = originalOrder.indexOf(a) - originalOrder.indexOf(b);
+
+    if (key === "height") {
+      if (va === null && vb === null) return order;
+      if (va === null) return 1;
+      if (vb === null) return -1;
+      return (va - vb) * dir;
+    }
+
+    var cmp;
+    if (typeof va === "number" && typeof vb === "number") {
+      cmp = va - vb;
+    } else {
+      cmp = String(va).localeCompare(String(vb), "el", { sensitivity: "base" });
+    }
+    return cmp === 0 ? order : cmp * dir;
+  }
+
+  function updateSortUI() {
+    var key = sortState.key;
+    if (sortSelect) sortSelect.value = key || "";
+
+    if (sortDirBtn) {
+      sortDirBtn.disabled = !key;
+      sortDirBtn.textContent = key ? (sortState.dir === 1 ? "↑" : "↓") : "↕";
+      var label = key
+        ? (sortState.dir === 1 ? "Αλλαγή σε φθίνουσα σειρά" : "Αλλαγή σε αύξουσα σειρά")
+        : "Επιλογή στήλης για ταξινόμηση";
+      sortDirBtn.setAttribute("aria-label", label);
+      sortDirBtn.title = label;
+    }
+
+    Array.prototype.forEach.call(table.querySelectorAll("thead th"), function (cell) {
+      var btn = cell.querySelector("button[data-sort]");
+      var active = btn && btn.getAttribute("data-sort") === key;
+      cell.setAttribute("aria-sort", active ? (sortState.dir === 1 ? "ascending" : "descending") : "none");
+      var arrow = cell.querySelector(".dp-arrow");
+      if (arrow) arrow.textContent = active ? (sortState.dir === 1 ? "↑" : "↓") : "↕";
+    });
+  }
+
+  function applySort() {
+    var ordered = originalOrder.slice();
+    if (sortState.key) ordered.sort(compareRows);
+    ordered.forEach(function (row) { tbody.appendChild(row); });
+    updateSortUI();
+    applyTable();
+  }
+
+  Array.prototype.forEach.call(table.querySelectorAll("thead button"), function (btn) {
+    btn.addEventListener("click", function () {
+      var key = btn.getAttribute("data-sort");
+      sortState.dir = sortState.key === key ? -sortState.dir : 1;
+      sortState.key = key;
+      applySort();
+    });
+  });
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", function () {
+      var key = sortSelect.value;
+      if (!key) {
+        sortState.key = null;
+        sortState.dir = 1;
+        applySort();
+        return;
+      }
+      if (sortState.key !== key) sortState.dir = 1;
+      sortState.key = key;
+      applySort();
+    });
+  }
+
+  if (sortDirBtn) {
+    sortDirBtn.addEventListener("click", function () {
+      if (!sortState.key) return;
+      sortState.dir = sortState.dir === 1 ? -1 : 1;
+      applySort();
+    });
+  }
+
+  /* Search */
+  function normalize(value) {
+    var text = String(value == null ? "" : value);
+    if (text.normalize) text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return text.replace(/ς/g, "σ").toLowerCase();
+  }
+
+  var haystacks = rows.map(function (row) {
+    var heightCell = row.querySelector(".dp-td-height strong");
+    var sourceLink = row.querySelector(".dp-td-src a, .dp-src a");
+    return normalize([
+      row.getAttribute("data-name"),
+      row.getAttribute("data-pe"),
+      row.getAttribute("data-region"),
+      row.getAttribute("data-access"),
+      row.getAttribute("data-season"),
+      row.getAttribute("data-activities"),
+      row.getAttribute("data-qid"),
+      row.getAttribute("data-height"),
+      heightCell ? heightCell.textContent : "",
+      sourceLink ? sourceLink.textContent : ""
+    ].join(" "));
+  });
+
+  function matchesSearch(row) {
+    if (!query) return true;
+    var hay = haystacks[rows.indexOf(row)];
+    var tokens = query.split(/\s+/);
+    for (var i = 0; i < tokens.length; i++) {
+      if (hay.indexOf(tokens[i]) === -1) return false;
+    }
+    return true;
+  }
+
+  function applyTable() {
+    var visible = rows.filter(matchesSearch);
+    rows.forEach(function (row) { row.hidden = visible.indexOf(row) === -1; });
+
+    var total = rows.length;
+    var shown = visible.length;
+    var raw = search ? search.value.trim() : "";
+
+    if (emptyNote) {
+      emptyNote.hidden = shown !== 0;
+      if (!shown) {
+        emptyNote.textContent = "Κανένα σημείο δεν ταιριάζει με «" + raw + "». Δοκίμασε μικρότερο όρο ή καθάρισε την αναζήτηση.";
+      }
+    }
+
+    if (!tableStatus) return;
+    if (shown === total && !query) {
+      tableStatus.textContent = total + " σημεία στον πίνακα.";
+    } else {
+      tableStatus.textContent = shown + " από " + total + " σημεία" + (query ? " για «" + raw + "»" : "") + ".";
+    }
+  }
+
+  function clearSearch() {
+    if (!search) return;
+    search.value = "";
+    query = "";
+    if (searchClear) searchClear.hidden = true;
+    search.focus();
+    applyTable();
+  }
+
+  function onSearch() {
+    if (!search) return;
+    var raw = search.value.trim();
+    query = normalize(raw);
+    if (searchClear) searchClear.hidden = raw === "";
+    applyTable();
+  }
+
+  if (search) {
+    search.addEventListener("input", onSearch);
+    search.addEventListener("search", onSearch);
+    search.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && search.value) {
+        event.preventDefault();
+        clearSearch();
+      }
+    });
+  }
+
+  if (searchClear) searchClear.addEventListener("click", clearSearch);
+
+  /* Open the matching card when an in-page link is followed */
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest ? event.target.closest('a[href^="#poi-"]') : null;
+    if (!link) return;
+    var card = document.getElementById(link.getAttribute("href").slice(1));
+    if (card && card.tagName === "DETAILS") card.open = true;
+  });
+
+  updateSortUI();
+  applyTable();
+})();
+</script>

@@ -1,0 +1,493 @@
+---
+layout: default
+title: "Άδειες"
+permalink: /licenses/
+description: "Όλες οι άδειες των εικόνων του ιστοτόπου, με δημιουργό και σύνδεσμο Wikimedia Commons."
+---
+<style>/* «Άδειες» — scoped to .lic-page, palette from the heritage-promotion site */
+.lic-page {
+  --lic-green: #285f50;
+  --lic-head: #234d41;
+  --lic-ink: #22332e;
+  --lic-soft: #e8f0eb;
+  --lic-line: #cbdcd2;
+  --lic-muted: #496157;
+  max-width: 1180px;
+  margin: 0 auto;
+  color: var(--lic-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.lic-page *, .lic-page *::before, .lic-page *::after { box-sizing: border-box; }
+.lic-page,
+.lic-page p, .lic-page li, .lic-page dt, .lic-page dd,
+.lic-page th, .lic-page td, .lic-page h1, .lic-page h2,
+.lic-page h3, .lic-page h4 { text-align: left; }
+.lic-page h1, .lic-page h2, .lic-page h3, .lic-page h4 { color: var(--lic-head); line-height: 1.22; }
+.lic-page h1 { margin: 0 0 14px; font-size: clamp(2.1rem, 4vw, 3.1rem); letter-spacing: -.025em; }
+.lic-page h2 { margin: 0; font-size: clamp(1.5rem, 2.5vw, 1.95rem); letter-spacing: -.015em; }
+.lic-page h3 { margin: 0 0 6px; font-size: 1rem; }
+.lic-page a { color: var(--lic-green); }
+.lic-page a:focus-visible, .lic-page button:focus-visible {
+  outline: 3px solid #176b83; outline-offset: 3px; border-radius: 3px;
+}
+.lic-visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Hero */
+.lic-hero { max-width: 900px; margin: 0 auto; text-align: center; }
+.lic-hero h1, .lic-hero p, .lic-stats li { text-align: center; }
+.lic-eyebrow { margin: 0 0 10px; color: #496d60; font-size: .8rem; font-weight: 700; letter-spacing: .07em; }
+.lic-lead { max-width: 740px; margin: 0 auto; color: #3f5a50; font-size: 1.1rem; line-height: 1.7; }
+.lic-stats {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px;
+  margin: 26px 0 0; padding: 0; list-style: none;
+}
+.lic-stats li { padding: 12px 8px; border: 1px solid var(--lic-line); border-radius: 10px; background: #fff; }
+.lic-stats strong { display: block; color: var(--lic-green); font-size: 1.45rem; line-height: 1.2; }
+.lic-stats span { display: block; color: #5c7268; font-size: .72rem; line-height: 1.35; }
+
+/* Sections */
+.lic-section { margin: 44px 0; }
+.lic-section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px 20px;
+  flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--lic-line);
+}
+.lic-kicker { margin: 0; color: #6b8177; font-size: .82rem; }
+.lic-note { max-width: 920px; margin: 0 0 16px; color: #3f5a50; font-size: .94rem; }
+.lic-why { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 30px; }
+.lic-why p { margin: 0; color: #3f5a50; font-size: .95rem; }
+
+/* Register table */
+.lic-table-wrap { overflow-x: auto; border: 1px solid var(--lic-line); border-radius: 12px; background: #fff; }
+.lic-table { width: 100%; min-width: 1020px; border-collapse: collapse; font-size: .9rem; }
+.lic-table thead th {
+  padding: 11px 12px; background: #eef4f0; border-bottom: 2px solid #b9cec3;
+  color: #2f5548; font-size: .76rem; font-weight: 700; letter-spacing: .02em; white-space: nowrap;
+}
+.lic-table tbody td { padding: 12px; border-top: 1px solid #e3ebe6; vertical-align: middle; }
+.lic-table tbody tr:hover { background: #f8fbf9; }
+.lic-group-row th {
+  padding: 11px 12px; border-top: 1px solid #b9cec3; background: #e8f0eb;
+  color: #234d41; font-size: .84rem; font-weight: 600;
+}
+.lic-group-row:first-child th { border-top: 0; }
+.lic-group-name { font-weight: 700; }
+.lic-group-count {
+  margin-left: 8px; padding: 1px 8px; border: 1px solid #b9cec3; border-radius: 999px;
+  background: #fff; color: #2f5548; font-size: .72rem; font-weight: 600;
+}
+.lic-group-note { margin-left: 10px; color: #4b6258; font-size: .78rem; font-weight: 400; }
+.lic-group-link { float: right; font-size: .76rem; font-weight: 600; white-space: nowrap; }
+.lic-thumb img {
+  display: block; width: 112px; height: 72px; object-fit: cover;
+  border: 1px solid var(--lic-line); border-radius: 7px; background: var(--lic-soft);
+}
+.lic-use strong { display: block; font-size: .9rem; }
+.lic-sub { display: block; margin-top: 2px; color: #6b8177; font-size: .74rem; }
+.lic-badge {
+  display: inline-block; padding: 3px 9px; border: 1px solid; border-radius: 999px;
+  font-size: .74rem; font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.lic-page a.lic-badge:hover { text-decoration: none; filter: brightness(.97); }
+.lic-badge-pd { background: #e6efe9; border-color: #a9c9b7; color: #1f5546; }
+.lic-badge-cc0 { background: #e4eef4; border-color: #a9c3d1; color: #1f4f63; }
+.lic-badge-bysa { background: #f7ecdc; border-color: #dcc39b; color: #7a4d12; }
+.lic-badge-by { background: #eceef2; border-color: #c3cad6; color: #3f4b5e; }
+.lic-license-note { display: block; margin-top: 4px; color: #6b8177; font-size: .72rem; }
+.lic-req { min-width: 210px; color: #3f5a50; font-size: .82rem; }
+.lic-links { min-width: 150px; }
+.lic-links a { display: inline-block; font-size: .8rem; font-weight: 600; }
+.lic-copy {
+  display: inline-block; margin-left: 10px; padding: 4px 9px; border: 1px solid #78998c;
+  border-radius: 7px; background: #fff; color: var(--lic-green); font: inherit;
+  font-size: .74rem; cursor: pointer;
+}
+.lic-copy:hover { background: var(--lic-soft); }
+.lic-copy.is-copied { background: var(--lic-green); border-color: var(--lic-green); color: #fff; }
+.lic-table-foot { margin: 8px 0 0; color: #6b8177; font-size: .78rem; }
+.lic-scroll-hint { display: none; margin: 6px 0 0; color: #6b8177; font-size: .74rem; }
+@media (max-width: 760px) { .lic-scroll-hint { display: block; } }
+
+/* Attribution */
+.lic-template {
+  margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--lic-green);
+  border-radius: 8px; background: #fff;
+}
+.lic-template code { color: #234d41; font-size: .85rem; overflow-wrap: anywhere; }
+.lic-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.lic-examples > div { padding: 14px 16px; border: 1px solid var(--lic-line); border-radius: 10px; background: #fff; }
+.lic-example-label { display: block; margin-bottom: 5px; color: #496d60; font-size: .72rem; font-weight: 700; }
+.lic-examples p { margin: 0; font-size: .88rem; }
+.lic-callout { margin-top: 14px; padding: 13px 16px; border-left: 4px solid var(--lic-green); border-radius: 8px; background: var(--lic-soft); }
+.lic-callout p { margin: 0; font-size: .88rem; }
+
+/* Licence cards */
+.lic-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.lic-card { display: flex; flex-direction: column; padding: 16px; border: 1px solid var(--lic-line); border-radius: 12px; background: #fff; }
+.lic-card > a { margin-top: auto; }
+.lic-card-count { display: block; margin: 9px 0 5px; color: var(--lic-head); font-size: .86rem; }
+.lic-card p { margin: 0 0 10px; color: #3f5a50; font-size: .82rem; line-height: 1.6; }
+.lic-card > a { font-size: .78rem; font-weight: 600; }
+
+/* Notes */
+.lic-notes {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 22px;
+  margin: 0; padding: 0; list-style: none;
+}
+.lic-notes li {
+  padding: 12px 14px; border: 1px solid var(--lic-line); border-radius: 10px;
+  background: #fff; color: #3f5a50; font-size: .84rem; line-height: 1.6;
+}
+.lic-back { margin: 18px 0 0; font-size: .88rem; font-weight: 600; }
+
+/* Footer */
+.lic-footer { margin-top: 48px; padding: 20px 0 8px; border-top: 1px solid var(--lic-line); color: #6b8177; font-size: .78rem; }
+.lic-footer p { margin: 0 0 4px; }
+
+/* Standalone preview chrome */
+.lic-preview-body {
+  --lic-green: #285f50; --lic-head: #234d41; --lic-ink: #22332e;
+  --lic-soft: #e8f0eb; --lic-line: #cbdcd2; --lic-muted: #496157;
+  margin: 0; background: #f4f8f5; color: #22332e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.lic-sitebar { background: #fff; border-bottom: 1px solid #e1e9e4; }
+.lic-sitebar-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 1320px; margin: 0 auto; padding: 14px 20px;
+}
+.lic-site-title { flex: 0 0 auto; color: var(--lic-head); font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+.lic-sitebar nav { display: flex; gap: 16px; overflow-x: auto; }
+.lic-sitebar nav a { color: #496157; font-size: .82rem; text-decoration: none; white-space: nowrap; }
+.lic-sitebar nav a:hover { color: var(--lic-green); }
+.lic-sitebar nav a.is-current { color: var(--lic-green); font-weight: 700; box-shadow: inset 0 -2px 0 var(--lic-green); }
+.lic-wrap { max-width: 1240px; margin: 0 auto; padding: 28px 20px 44px; }
+
+@media (max-width: 1000px) {
+  .lic-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lic-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .lic-why, .lic-examples, .lic-notes { grid-template-columns: 1fr; }
+  .lic-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lic-cards { grid-template-columns: 1fr; }
+  .lic-sitebar-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .lic-sitebar nav { width: 100%; flex-wrap: wrap; overflow-x: visible; gap: 8px 14px; }
+  .lic-group-link { float: none; display: block; margin-top: 4px; }
+}
+@media print {
+  .lic-sitebar, .lic-copy, .lic-back { display: none !important; }
+  .lic-page { max-width: none; }
+  .lic-table tbody tr { break-inside: avoid; }
+}
+</style>
+<article class="lic-page">
+
+<header class="lic-hero">
+  <p class="lic-eyebrow">Τεκμηρίωση · 11 εικόνες · 5 άδειες</p>
+  <h1>Άδειες</h1>
+  <p class="lic-lead">Όλες οι εικόνες του ιστοτόπου σε ένα σημείο: ποιος τις έφτιαξε, με ποια άδεια διατίθενται και πού βρίσκεται το αρχείο τους στο Wikimedia Commons.</p>
+  <ul class="lic-stats" aria-label="Σύνοψη αδειών">
+    <li><strong>11</strong><span>εικόνες</span></li>
+    <li><strong>2</strong><span>Public domain</span></li>
+    <li><strong>5</strong><span>CC BY-SA 4.0</span></li>
+    <li><strong>2</strong><span>CC BY-SA 3.0</span></li>
+    <li><strong>1</strong><span>CC BY 3.0</span></li>
+    <li><strong>1</strong><span>CC0</span></li>
+  </ul>
+</header>
+
+<section class="lic-section" aria-labelledby="why-title">
+  <div class="lic-why">
+    <div>
+      <h2 id="why-title">Γιατί χωριστή σελίδα</h2>
+      <p>Η αναφορά κάτω από κάθε φωτογραφία είναι απαραίτητη, αλλά διάσπαρτη σε έντεκα σελίδες. Εδώ οι άδειες ελέγχονται συνολικά: ποιες επιτρέπουν εμπορική χρήση, ποιες ζητούν αναφορά και ποιες ζητούν ίδια άδεια στα παράγωγα.</p>
+    </div>
+    <div>
+      <h2>Τι καλύπτει</h2>
+      <p>Δέκα φωτογραφίες σημείων και μία εικόνα αρχικής σελίδας. Οι κωδικοί QR δεν είναι φωτογραφίες και δεν περιλαμβάνονται. Οι εικόνες φιλοξενούνται τοπικά· το Commons είναι η πηγή και το σημείο ελέγχου της άδειας.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lic-section" id="pinakas" aria-labelledby="pinakas-title">
+  <div class="lic-section-head">
+    <h2 id="pinakas-title">Μητρώο εικόνων</h2>
+    <p class="lic-kicker">11 εικόνες · ομαδοποιημένες κατά άδεια</p>
+  </div>
+  <p class="lic-note">Η σειρά ξεκινά από τις πιο ελεύθερες άδειες. Η στήλη «Τι απαιτείται» συνοψίζει την υποχρέωση· η πλήρης διατύπωση βρίσκεται στη σελίδα κάθε άδειας.</p>
+  <div class="lic-table-wrap">
+    <table class="lic-table">
+      <caption class="lic-visually-hidden">Μητρώο αδειών των εικόνων του ιστοτόπου</caption>
+      <thead>
+        <tr>
+          <th scope="col">Εικόνα</th>
+          <th scope="col">Χρήση στον ιστότοπο</th>
+          <th scope="col">Δημιουργός</th>
+          <th scope="col">Άδεια</th>
+          <th scope="col">Τι απαιτείται</th>
+          <th scope="col">Commons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="lic-group-row">
+  <th colspan="6" scope="colgroup">
+    <span class="lic-group-name">Public domain</span>
+    <span class="lic-group-count">2 εικόνες</span>
+    <span class="lic-group-note">Ελεύθερα από γνωστούς περιορισμούς πνευματικών δικαιωμάτων (PD Mark 1.0).</span>
+    <a class="lic-group-link" href="https://creativecommons.org/publicdomain/mark/1.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+  </th>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/edessa.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτες Έδεσσας — Ευαγγελία Κατή" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτες Έδεσσας</strong><span class="lic-sub">Πέλλας</span></td>
+  <td>Ευαγγελία Κατή</td>
+  <td><a class="lic-badge lic-badge-pd" href="https://creativecommons.org/publicdomain/mark/1.0/" target="_blank" rel="noopener noreferrer">Public domain</a><span class="lic-license-note">PD Mark 1.0</span></td>
+  <td class="lic-req">Καμία · αναφορά προαιρετική</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτες Έδεσσας» — Ευαγγελία Κατή, PD Mark 1.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτες Έδεσσας">Αντιγραφή</button></td>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/valanaris.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτης Βαλανάρη — Μαρία Φερεντίνου" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτης Βαλανάρη</strong><span class="lic-sub">Ανατολικής Αττικής</span></td>
+  <td>Μαρία Φερεντίνου</td>
+  <td><a class="lic-badge lic-badge-pd" href="https://creativecommons.org/publicdomain/mark/1.0/" target="_blank" rel="noopener noreferrer">Public domain</a><span class="lic-license-note">PD Mark 1.0</span></td>
+  <td class="lic-req">Καμία · αναφορά προαιρετική</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%9D%CF%84%CF%81%CE%AC%CF%86%CE%B9.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτης Βαλανάρη» — Μαρία Φερεντίνου, PD Mark 1.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:%CE%9A%CE%B1%CF%84%CE%B1%CF%81%CF%81%CE%AC%CE%BA%CF%84%CE%B7%CF%82_%CE%9D%CF%84%CF%81%CE%AC%CF%86%CE%B9.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτης Βαλανάρη">Αντιγραφή</button></td>
+</tr>
+<tr class="lic-group-row">
+  <th colspan="6" scope="colgroup">
+    <span class="lic-group-name">CC0 1.0</span>
+    <span class="lic-group-count">1 εικόνα</span>
+    <span class="lic-group-note">Ο δημιουργός παραιτήθηκε από τα δικαιώματά του· δεν απαιτείται αναφορά.</span>
+    <a class="lic-group-link" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+  </th>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/drymona-home.jpg' | relative_url }}" alt="Φωτογραφία: Αρχική σελίδα — Jebulon" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Αρχική σελίδα</strong><span class="lic-sub">Drymona water fall and pool</span></td>
+  <td>Jebulon</td>
+  <td><a class="lic-badge lic-badge-cc0" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a><span class="lic-license-note">CC0 1.0</span></td>
+  <td class="lic-req">Καμία · αναφορά προαιρετική</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Drymona_water_fall_and_pool_north_Euboea_Greece.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Αρχική σελίδα» — Jebulon, CC0 1.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Drymona_water_fall_and_pool_north_Euboea_Greece.jpg)" aria-label="Αντιγραφή αναφοράς για Αρχική σελίδα">Αντιγραφή</button></td>
+</tr>
+<tr class="lic-group-row">
+  <th colspan="6" scope="colgroup">
+    <span class="lic-group-name">CC BY-SA 4.0</span>
+    <span class="lic-group-count">5 εικόνες</span>
+    <span class="lic-group-note">Αναφορά, σύνδεσμος άδειας και ίδια άδεια στα παράγωγα.</span>
+    <a class="lic-group-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+  </th>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/drymona.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτες της Δρυμώνας — Emmanuel Karpathiou" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτες της Δρυμώνας</strong><span class="lic-sub">Εύβοιας</span></td>
+  <td>Emmanuel Karpathiou</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a><span class="lic-license-note">CC BY-SA 4.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Drymonas_waterfalls_2.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτες της Δρυμώνας» — Emmanuel Karpathiou, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Drymonas_waterfalls_2.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτες της Δρυμώνας">Αντιγραφή</button></td>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/polylimnio.jpg' | relative_url }}" alt="Φωτογραφία: Πολυλίμνιο Μεσσηνίας — Cascafico" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Πολυλίμνιο Μεσσηνίας</strong><span class="lic-sub">Μεσσηνίας</span></td>
+  <td>Cascafico</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a><span class="lic-license-note">CC BY-SA 4.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Polylimnios_lakes.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Πολυλίμνιο Μεσσηνίας» — Cascafico, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Polylimnios_lakes.jpg)" aria-label="Αντιγραφή αναφοράς για Πολυλίμνιο Μεσσηνίας">Αντιγραφή</button></td>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/man-katsa.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτης Μαν Κάτσα — Timeheritage" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτης Μαν Κάτσα</strong><span class="lic-sub">Λέσβου</span></td>
+  <td>Timeheritage</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a><span class="lic-license-note">CC BY-SA 4.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Mankatsa.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτης Μαν Κάτσα» — Timeheritage, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Mankatsa.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτης Μαν Κάτσα">Αντιγραφή</button></td>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/livaditis.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτης Λειβαδίτη — gregory" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτης Λειβαδίτη</strong><span class="lic-sub">Ξάνθης</span></td>
+  <td>gregory</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a><span class="lic-license-note">CC BY-SA 4.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Livaditis.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτης Λειβαδίτη» — gregory, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Livaditis.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτης Λειβαδίτη">Αντιγραφή</button></td>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/pythara.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτες Πυθάρας — Trikos" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτες Πυθάρας</strong><span class="lic-sub">Άνδρου</span></td>
+  <td>Trikos</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a><span class="lic-license-note">CC BY-SA 4.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Pithara%27s_waterfall,_Apoikia,_Andros.JPG" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτες Πυθάρας» — Trikos, CC BY-SA 4.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Pithara%27s_waterfall,_Apoikia,_Andros.JPG)" aria-label="Αντιγραφή αναφοράς για Καταρράκτες Πυθάρας">Αντιγραφή</button></td>
+</tr>
+<tr class="lic-group-row">
+  <th colspan="6" scope="colgroup">
+    <span class="lic-group-name">CC BY-SA 3.0</span>
+    <span class="lic-group-count">2 εικόνες</span>
+    <span class="lic-group-note">Αναφορά, σύνδεσμος άδειας και ίδια άδεια στα παράγωγα.</span>
+    <a class="lic-group-link" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+  </th>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/neda.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτης Νέδας — Sp!ros" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτης Νέδας</strong><span class="lic-sub">Ηλεία και Μεσσηνία</span></td>
+  <td>Sp!ros</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a><span class="lic-license-note">CC BY-SA 3.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Nedariversp!ros.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτης Νέδας» — Sp!ros, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Nedariversp!ros.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτης Νέδας">Αντιγραφή</button></td>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/fonias.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτης Φονιά — Ggia" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτης Φονιά</strong><span class="lic-sub">Σαμοθράκης</span></td>
+  <td>Ggia</td>
+  <td><a class="lic-badge lic-badge-bysa" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a><span class="lic-license-note">CC BY-SA 3.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας · ίδια άδεια σε παράγωγα</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:20020800_Fonias_waterfall,_Samothrace_island_Thrace_Greece.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτης Φονιά» — Ggia, CC BY-SA 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:20020800_Fonias_waterfall,_Samothrace_island_Thrace_Greece.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτης Φονιά">Αντιγραφή</button></td>
+</tr>
+<tr class="lic-group-row">
+  <th colspan="6" scope="colgroup">
+    <span class="lic-group-name">CC BY 3.0</span>
+    <span class="lic-group-count">1 εικόνα</span>
+    <span class="lic-group-note">Αναφορά και σύνδεσμος άδειας· χωρίς υποχρέωση ίδιας άδειας.</span>
+    <a class="lic-group-link" href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+  </th>
+</tr>
+<tr>
+  <td class="lic-thumb"><img src="{{ '/assets/images/waterfalls/mylonas.jpg' | relative_url }}" alt="Φωτογραφία: Καταρράκτης Μυλωνά — Manos Perakakis" width="112" height="72" loading="lazy" decoding="async"></td>
+  <td class="lic-use"><strong>Καταρράκτης Μυλωνά</strong><span class="lic-sub">Λασιθίου</span></td>
+  <td>Manos Perakakis</td>
+  <td><a class="lic-badge lic-badge-by" href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a><span class="lic-license-note">CC BY 3.0</span></td>
+  <td class="lic-req">Αναφορά + σύνδεσμος άδειας</td>
+  <td class="lic-links"><a href="https://commons.wikimedia.org/wiki/File:Waterfall_of_Milonas_Gorge,_Agios_Ioannis,_Ierapetra,_Crete_2012.jpg" target="_blank" rel="noopener noreferrer">Αρχείο ↗</a><button type="button" class="lic-copy" data-credit="«Καταρράκτης Μυλωνά» — Manos Perakakis, CC BY 3.0, Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Waterfall_of_Milonas_Gorge,_Agios_Ioannis,_Ierapetra,_Crete_2012.jpg)" aria-label="Αντιγραφή αναφοράς για Καταρράκτης Μυλωνά">Αντιγραφή</button></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lic-scroll-hint">Σε μικρή οθόνη ο πίνακας κυλά οριζόντια.</p>
+  <p class="lic-table-foot">Οι μικρογραφίες χρησιμοποιούν τα τοπικά αρχεία του ιστοτόπου· ο σύνδεσμος Commons οδηγεί στο αρχείο προέλευσης.</p>
+</section>
+
+<section class="lic-section" id="referencing" aria-labelledby="ref-title">
+  <div class="lic-section-head">
+    <h2 id="ref-title">Πώς αναφέρετε μια εικόνα</h2>
+    <p class="lic-kicker">Μία γραμμή, τρία στοιχεία</p>
+  </div>
+  <p class="lic-note">Η προτεινόμενη μορφή είναι σταθερή για όλες τις εικόνες. Το κουμπί «Αντιγραφή» σε κάθε γραμμή δίνει έτοιμη τη συγκεκριμένη αναφορά.</p>
+  <div class="lic-template">
+    <code>«Τίτλος εικόνας» — Δημιουργός, Άδεια, Wikimedia Commons (σύνδεσμος αρχείου)</code>
+  </div>
+  <div class="lic-examples">
+    <div>
+      <span class="lic-example-label">Παράδειγμα · Public domain</span>
+      <p>«Καταρράκτες Έδεσσας» — Ευαγγελία Κατή, Public domain (PD Mark 1.0), Wikimedia Commons.</p>
+    </div>
+    <div>
+      <span class="lic-example-label">Παράδειγμα · CC BY-SA 4.0</span>
+      <p>«Καταρράκτες της Δρυμώνας» — Emmanuel Karpathiou, CC BY-SA 4.0, Wikimedia Commons.</p>
+    </div>
+  </div>
+  <div class="lic-callout">
+    <p><strong>Αλλαγές και παράγωγα:</strong> στις άδειες CC BY και CC BY-SA δηλώνετε αν αλλάξατε την εικόνα. Στις CC BY-SA, το παράγωγο διανέμεται με την ίδια άδεια. Στις Public domain και CC0 δεν υπάρχει υποχρέωση αναφοράς — η αναφορά παραμένει καλή πρακτική.</p>
+  </div>
+</section>
+
+<section class="lic-section" id="ti-simainei" aria-labelledby="cards-title">
+  <div class="lic-section-head">
+    <h2 id="cards-title">Τι σημαίνει κάθε άδεια</h2>
+    <p class="lic-kicker">Σύνοψη των όρων, όχι νομικό κείμενο</p>
+  </div>
+  <div class="lic-cards"><article class="lic-card">
+  <span class="lic-badge lic-badge-pd">Public domain</span>
+  <strong class="lic-card-count">2 εικόνες</strong>
+  <p>Η Commons έχει χαρακτηρίσει το έργο ελεύθερο από γνωστούς περιορισμούς πνευματικών δικαιωμάτων. Δεν απαιτείται αναφορά· η σελίδα τη διατηρεί για διαφάνεια.</p>
+  <a href="https://creativecommons.org/publicdomain/mark/1.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+</article>
+<article class="lic-card">
+  <span class="lic-badge lic-badge-cc0">CC0 1.0</span>
+  <strong class="lic-card-count">1 εικόνα</strong>
+  <p>Ο δημιουργός παραιτήθηκε από τα δικαιώματα του δημιουργού και τα συγγενικά δικαιώματα. Δεν απαιτείται αναφορά.</p>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+</article>
+<article class="lic-card">
+  <span class="lic-badge lic-badge-by">CC BY 3.0</span>
+  <strong class="lic-card-count">1 εικόνα</strong>
+  <p>Απαιτείται αναφορά, σύνδεσμος στην άδεια και δήλωση αλλαγών. Δεν απαιτείται ίδια άδεια για παράγωγα.</p>
+  <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+</article>
+<article class="lic-card">
+  <span class="lic-badge lic-badge-bysa">CC BY-SA 3.0 / 4.0</span>
+  <strong class="lic-card-count">7 εικόνες</strong>
+  <p>Απαιτείται αναφορά, σύνδεσμος στην άδεια, δήλωση αλλαγών και ίδια άδεια για τα παράγωγα έργα.</p>
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Πράξη άδειας ↗</a>
+</article></div>
+</section>
+
+<section class="lic-section" id="oroi" aria-labelledby="oroi-title">
+  <div class="lic-section-head">
+    <h2 id="oroi-title">Έλεγχος και όρια</h2>
+    <p class="lic-kicker">Τι καλύπτει αυτή η σελίδα</p>
+  </div>
+  <ul class="lic-notes">
+    <li><strong>Πηγή καταγραφής:</strong> οι σελίδες αρχείων του Wikimedia Commons, όπως τις παραπέμπουν οι σελίδες των σημείων. Τελευταίος έλεγχος: 24 Οκτωβρίου 2026.</li>
+    <li><strong>Πριν από επαναχρησιμοποίηση:</strong> ελέγξτε ξανά τη σελίδα του αρχείου. Οι άδειες CC δεν ανακαλούνται, αλλά η σελίδα μπορεί να έχει ενημερωθεί ως προς τον δημιουργό ή τη σήμανση.</li>
+    <li><strong>Τι δεν καλύπτεται:</strong> δικαιώματα προσωπικότητας, ιδιωτικότητας ή εμπορικών σημάτων που τυχόν απεικονίζονται. Οι άδειες αφορούν πνευματικά δικαιώματα.</li>
+    <li><strong>QR codes:</strong> δεν είναι φωτογραφίες και δεν καταγράφονται εδώ· παράγονται για τον ιστότοπο.</li>
+  </ul>
+  <p class="lic-back"><a href="{{ '/data/' | relative_url }}">Τα δεδομένα των σημείων →</a></p>
+</section>
+
+<footer class="lic-footer">
+  <p><strong>Άδειες εικόνων</strong> · Τελευταία ενημέρωση: 2 Νοεμβρίου 2026 · Έλεγχος αδειών: 24 Οκτωβρίου 2026</p>
+  <p>Όλα τα στοιχεία προέρχονται από τις σελίδες των σημείων και από τις σελίδες αρχείων του Wikimedia Commons.</p>
+</footer>
+</article>
+<script>(function () {
+  "use strict";
+  var buttons = Array.prototype.slice.call(document.querySelectorAll(".lic-copy"));
+  if (!buttons.length) return;
+
+  var status = document.createElement("span");
+  status.className = "lic-visually-hidden";
+  status.setAttribute("role", "status");
+  status.setAttribute("aria-live", "polite");
+  document.body.appendChild(status);
+
+  function fallbackCopy(text) {
+    var area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.top = "-1000px";
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (error) { ok = false; }
+    document.body.removeChild(area);
+    return ok;
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var text = button.getAttribute("data-credit") || "";
+      var done = function (ok) {
+        button.textContent = ok ? "Αντιγράφηκε" : "Δοκιμάστε ξανά";
+        button.classList.toggle("is-copied", ok);
+        status.textContent = ok
+          ? "Η αναφορά αντιγράφηκε: " + text
+          : "Η αντιγραφή δεν ήταν διαθέσιμη. Επιλέξτε το κείμενο της αναφοράς χειροκίνητα.";
+        window.setTimeout(function () {
+          button.textContent = "Αντιγραφή";
+          button.classList.remove("is-copied");
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallbackCopy(text)); });
+      } else {
+        done(fallbackCopy(text));
+      }
+    });
+  });
+})();
+</script>
