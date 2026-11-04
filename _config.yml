@@ -17,6 +17,8 @@ header_pages:
   - index.md
   - pois.md
   - map.md
+  - data.html
   - prin-tin-episkepsi.md
   - team.md
   - about.md
+  - licenses.html
