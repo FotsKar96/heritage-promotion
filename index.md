@@ -45,7 +45,7 @@ image: /assets/images/drymona-home.jpg
 <nav class="waterfall-home-links" aria-label="Σχεδιάστε την περιήγησή σας">
   <a class="waterfall-home-link" href="{{ '/map/' | relative_url }}"><span class="waterfall-link-label">Βρείτε τον τόπο</span><strong>Χάρτης καταρρακτών</strong><span>Δείτε πού βρίσκεται κάθε σημείο της επιλογής μας.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
   <a class="waterfall-home-link" href="{{ '/prin-tin-episkepsi/' | relative_url }}"><span class="waterfall-link-label">Προετοιμαστείτε</span><strong>Πριν από την επίσκεψη</strong><span>Διαβάστε όσα χρειάζεται να ελέγξετε πριν ξεκινήσετε.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
-  <a class="waterfall-home-link" href="{{ '/about/' | relative_url }}"><span class="waterfall-link-label">Γνωρίστε την εργασία</span><strong>Πηγές και μεθοδολογία</strong><span>Μάθετε πώς επιλέγουμε και τεκμηριώνουμε τις πληροφορίες.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
+  <a class="waterfall-home-link" href="{{ '/about/' | relative_url }}"><span class="waterfall-link-label">Περισσότερες ΠΛηροφορίες</span><strong>Πηγές</strong><span>Μάθετε περισσότερες πληροφορίες.</span><span class="waterfall-link-arrow" aria-hidden="true">→</span></a>
 </nav>
 <div class="waterfall-qr-row" style="flex-direction: column; align-items: center;">
   <figure class="waterfall-qr">
