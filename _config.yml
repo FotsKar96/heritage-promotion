@@ -15,10 +15,9 @@ collections:
     output: true
 header_pages:
   - index.md
+  - prin-tin-episkepsi.md
+  - data.html
   - pois.md
   - map.md
-  - data.html
-  - prin-tin-episkepsi.md
   - team.md
-  - about.md
   - licenses.html
