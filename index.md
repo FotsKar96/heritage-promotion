@@ -2,7 +2,8 @@
 layout: waterfall_home
 title: "Αρχική"
 description: "Εξερευνήστε δέκα επιλεγμένους καταρράκτες της Ελλάδας με φωτογραφίες, χάρτες και τεκμηριωμένα χαρακτηριστικά."
-image: /assets/images/drymona-home.jpg
+image: >-
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Drymona_water_fall_and_pool_north_Euboea_Greece.jpg/960px-Drymona_water_fall_and_pool_north_Euboea_Greece.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20160811161403
 ---
 <section class="waterfall-welcome" aria-labelledby="waterfall-welcome-title">
   <p class="waterfall-eyebrow">10 σημεία · Φυσικά τοπία · Χάρτες και πηγές</p>
