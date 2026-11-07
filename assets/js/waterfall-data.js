@@ -70,7 +70,7 @@
     for (let offset = 0; offset < missing.length; offset += 50) {
       const data = await requestApi('https://www.wikidata.org', {
         action: 'wbgetentities', ids: missing.slice(offset, offset + 50).join('|'),
-        props: 'labels|descriptions|claims|sitelinks', languages: 'el|en', redirects: '1'
+        props: 'labels|descriptions|claims|sitelinks', languages: 'el|en', redirects: 'yes'
       });
       for (const item of Object.values(data.entities || {})) entities.set(item.id, item);
       for (const item of data.redirects || []) redirects.set(item.from, item.to);
