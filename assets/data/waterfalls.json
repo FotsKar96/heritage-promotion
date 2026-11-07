@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "qid": "Q50809609",
+      "slug": "edessa",
+      "name": "Καταρράκτες Έδεσσας",
+      "regional_unit": "Πέλλας",
+      "region": "Κεντρική Μακεδονία",
+      "region_qid": "Q17152",
+      "height_m": 70.0,
+      "height_approximate": false,
+      "height_note": "Αφορά τον Κάρανο, όχι το άθροισμα των καταρρακτών της Έδεσσας.",
+      "landscape": "Καταρράκτες μέσα στο αστικό τοπίο",
+      "access_code": "Α",
+      "access_text": "Πάρκο Καταρρακτών, σκάλες και διαμορφωμένα σημεία θέασης.",
+      "activities": "Θέαση Κάρανου, φωτογραφία, περιήγηση πάρκου",
+      "seasonality": "Όλο τον χρόνο",
+      "seasonality_note": "Δεν δίνεται σταθερή μηνιαία παροχή· ελέγξτε την τοπική ενημέρωση.",
+      "latitude": 40.803464,
+      "longitude": 22.055301,
+      "sources": [
+        {
+          "label": "Visit Edessa — Κάρανος",
+          "url": "https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall"
+        }
+      ],
+      "documentation_status": "full",
+      "documentation_tier": "Επιστημονική μελέτη + επίσημη πηγή",
+      "documentation_note": "Η Έδεσσα είναι το μόνο σημείο της δεκάδας με επιστημονική μελέτη γεωτόπου (Greek Scapes). Το ύψος των 70 μ. αφορά τον Κάρανο και διασταυρώνεται με την επίσημη δημοτική περιγραφή.",
+      "has_scientific_study": true,
+      "live_height_qid": null,
+      "live_administration": true
+    },
+    {
+      "qid": "Q96143730",
+      "slug": "drymona",
+      "name": "Καταρράκτες της Δρυμώνας",
+      "regional_unit": "Εύβοιας",
+      "region": "Στερεά Ελλάδα",
+      "region_qid": "Q199580",
+      "height_m": 10.0,
+      "height_approximate": false,
+      "height_note": "Η μεγαλύτερη πτώση όπως αναφέρεται στη σελίδα του ΕΟΤ.",
+      "landscape": "Μικρό φαράγγι με καταρράκτες και λιμνούλες",
+      "access_code": "Α",
+      "access_text": "Διαμορφωμένο μονοπάτι με ξύλινα κάγκελα και γεφυράκια· περίπου 15 λεπτά.",
+      "activities": "Πεζοπορία, θέαση, φωτογραφία",
+      "seasonality": "Άνοιξη · περιορισμένη ροή καλοκαίρι",
+      "seasonality_note": "Άνοιξη με πλουσιότερα νερά· η ροή περιορίζεται στην καρδιά του καλοκαιριού.",
+      "latitude": 38.872271,
+      "longitude": 23.293446,
+      "sources": [
+        {
+          "label": "Visit Greece / ΕΟΤ — Δρυμώνας",
+          "url": "https://www.visitgreece.gr/el/experiences/nature/gorges/drymonas-waterfalls"
+        }
+      ],
+      "documentation_status": "full",
+      "documentation_tier": "Επίσημη πηγή ΕΟΤ + λήμμα",
+      "documentation_note": "Το ύψος των 10 μ. και η προσέγγιση των ~15′ προέρχονται από τον ΕΟΤ και διασταυρώνονται με το λήμμα. Δεν υπάρχει επιστημονική μελέτη γεωτόπου για το σημείο.",
+      "has_scientific_study": false,
+      "live_height_qid": null,
+      "live_administration": true
+    },
+    {
+      "qid": "Q16329450",
+      "slug": "polylimnio",
+      "name": "Πολυλίμνιο Μεσσηνίας",
+      "regional_unit": "Μεσσηνίας",
+      "region": "Πελοπόννησος",
+      "region_qid": "Q202484",
+      "height_m": 25.0,
+      "height_approximate": true,
+      "height_note": "Αφορά την Καδούλα μέσα στο σύμπλεγμα, όχι ενιαίο ύψος όλου του Πολυλιμνίου.",
+      "landscape": "Σύμπλεγμα φυσικών λιμνών και καταρρακτών",
+      "access_code": "Β",
+      "access_text": "Σηματοδοτημένη πορεία περίπου 3 χλμ. δίπλα στο νερό, ~2 ώρες χωρίς στάσεις.",
+      "activities": "Πεζοπορία, θέαση λιμνών, φωτογραφία",
+      "seasonality": "Άνοιξη–φθινόπωρο",
+      "seasonality_note": "Αποφυγή χειμώνα και αρχών άνοιξης όταν τα νερά είναι ορμητικά και τα βράχια γλιστερά.",
+      "latitude": 36.98355,
+      "longitude": 21.85382,
+      "sources": [
+        {
+          "label": "Visit Greece / ΕΟΤ — Πολυλίμνιο",
+          "url": "https://www.visitgreece.gr/el/experiences/nature/gorges/polylimnio-messenia"
+        }
+      ],
+      "documentation_status": "full",
+      "documentation_tier": "Επίσημη πηγή ΕΟΤ + περιφερειακή πηγή",
+      "documentation_note": "Το ύψος αφορά μόνο την Καδούλα· η πορεία και η εποχικότητα τεκμηριώνονται από τον ΕΟΤ και την περιφερειακή σελίδα. Δεν υπάρχει επιστημονική μελέτη γεωτόπου.",
+      "has_scientific_study": false,
+      "live_height_qid": null,
+      "live_administration": true
+    },
+    {
+      "qid": "Q105529431",
+      "slug": "man-katsa",
+      "name": "Καταρράκτης Μαν Κάτσα",
+      "regional_unit": "Λέσβου",
+      "region": "Βόρειο Αιγαίο",
+      "region_qid": "Q173620",
+      "height_m": 15.0,
+      "height_approximate": true,
+      "height_note": "Το ύψος του γκρεμού από τον οποίο πέφτει το νερό.",
+      "landscape": "Ρέμα και μικρή φυσική λίμνη σε ηφαιστειακά πετρώματα",
+      "access_code": "Γ",
+      "access_text": "Τοπική πρόσβαση από Μανταμάδο–Πεδή· χωρίς τεκμηριωμένο χρόνο ή χάραξη.",
+      "activities": "Θέαση, φωτογραφία, περιήγηση ρέματος",
+      "seasonality": "Χωρίς τεκμηριωμένο πρόγραμμα",
+      "seasonality_note": "Απαιτείται τοπική ενημέρωση για παρουσία και ροή νερού.",
+      "latitude": 39.27637,
+      "longitude": 26.35883,
+      "sources": [
+        {
+          "label": "Visit Lesvos — Μαν Κάτσα",
+          "url": "https://www.visitlesvos.gr/pois/man-katsa-waterfall/"
+        }
+      ],
+      "documentation_status": "limited",
+      "documentation_tier": "Τουριστική πηγή",
+      "documentation_note": "Μία μόνο πηγή (Visit Lesvos) τεκμηριώνει το ύψος. Δεν υπάρχει ανεξάρτητη διασταύρωση, αριθμητικό ύψος από δεύτερη πηγή ή επιστημονική μελέτη.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q105529431",
+      "live_administration": true
+    },
+    {
+      "qid": "Q109562646",
+      "slug": "livaditis",
+      "name": "Καταρράκτης Λειβαδίτη",
+      "regional_unit": "Ξάνθης",
+      "region": "Ανατολική Μακεδονία και Θράκη",
+      "region_qid": "Q171314",
+      "height_m": 60.0,
+      "height_approximate": true,
+      "height_note": "Η κατακόρυφη πτώση όπως περιγράφεται από τον Δήμο Ξάνθης.",
+      "landscape": "Δασικό τοπίο με κατακόρυφη πτώση νερού",
+      "access_code": "Β",
+      "access_text": "Μέσω Σταυρούπολης–Λειβαδίτη, δασικός δρόμος και τελικό πεζό τμήμα.",
+      "activities": "Πεζοπορία σε δάσος, θέαση, φωτογραφία",
+      "seasonality": "Χειμώνας με πάγο",
+      "seasonality_note": "Ο καταρράκτης μπορεί να παγώσει· η χειμερινή εικόνα δεν σημαίνει πάντα εφικτή πρόσβαση.",
+      "latitude": 41.328068,
+      "longitude": 24.67222,
+      "sources": [
+        {
+          "label": "Δήμος Ξάνθης — Λειβαδίτης / Τραχώνι",
+          "url": "https://www.cityofxanthi.gr/episkeptes/axiotheata/stavroupoli/katarraktis-tou-leivaditi-i-traxoniou"
+        }
+      ],
+      "documentation_status": "limited",
+      "documentation_tier": "Δημοτική πηγή",
+      "documentation_note": "Μία δημοτική πηγή τεκμηριώνει το ύψος και τη διαδρομή. Δεν υπάρχει ελληνικό λήμμα Wikipedia ούτε ανεξάρτητη μέτρηση.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q109562646",
+      "live_administration": true
+    },
+    {
+      "qid": "Q123279956",
+      "slug": "neda",
+      "name": "Καταρράκτης Νέδας",
+      "regional_unit": "Ηλεία και Μεσσηνία",
+      "region": "Πελοπόννησος",
+      "region_qid": "Q202484",
+      "height_m": null,
+      "height_approximate": false,
+      "height_note": "Δεν έχει διασταυρωθεί αριθμητική τιμή για τον συγκεκριμένο καταρράκτη της καταχώρισης.",
+      "landscape": "Καταρράκτης στο ποτάμιο τοπίο της Νέδας",
+      "access_code": "Γ",
+      "access_text": "Επιλέξτε την πρόσβαση προς τον συγκεκριμένο καταρράκτη· επιβεβαιώστε το τελικό μονοπάτι.",
+      "activities": "Θέαση καταρράκτη, πεζοπορία, φωτογραφία",
+      "seasonality": "Χωρίς σταθερό μήνα",
+      "seasonality_note": "Απαιτείται ενημέρωση για ροή και κατάσταση φαραγγιού.",
+      "latitude": 37.39681,
+      "longitude": 21.82056,
+      "sources": [
+        {
+          "label": "Visit Peloponnese — Νέδα",
+          "url": "https://visitpeloponnese.com/el/prdct/neda-apokosmi-empeiria-apo-faraggi-stoys-katarraktes"
+        }
+      ],
+      "documentation_status": "limited",
+      "documentation_tier": "Περιφερειακή τουριστική πηγή",
+      "documentation_note": "Η Νέδα βρίσκεται στην ίδια κατηγορία με τον Μάστορα: τεκμηρίωση επιπέδου περιοδικού πεδίου, χωρίς αριθμητικό ύψος. Η θέση είναι οριακή Ηλείας–Μεσσηνίας· η καταχώριση αφορά ένα σημείο, όχι όλο το φαράγγι.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q123279956",
+      "live_administration": false
+    },
+    {
+      "qid": "Q123279134",
+      "slug": "fonias",
+      "name": "Καταρράκτης Φονιά",
+      "regional_unit": "Σαμοθράκης",
+      "region": "Ανατολική Μακεδονία και Θράκη",
+      "region_qid": "Q171314",
+      "height_m": null,
+      "height_approximate": false,
+      "height_note": "Δεν αποδίδεται ύψος άλλης πτώσης του ίδιου ρέματος στο συγκεκριμένο σημείο.",
+      "landscape": "Ρέμα με καταρράκτες και βάθρες",
+      "access_code": "Γ",
+      "access_text": "Δημοτική καταγραφή μονοπατιών· επιβεβαιώστε ποια χάραξη είναι σήμερα ανοικτή.",
+      "activities": "Πεζοπορία, θέαση βαθρών, φωτογραφία",
+      "seasonality": "Χωρίς μηνιαίο πρόγραμμα",
+      "seasonality_note": "Έλεγχος ροής και τοπικών συνθηκών πριν από την επίσκεψη.",
+      "latitude": 40.48013,
+      "longitude": 25.64568,
+      "sources": [
+        {
+          "label": "Περιφέρεια ΑΜΘ — Βάθρες Φονιά",
+          "url": "https://www.emtgreece.com/el/proorismos/bathresfonias-gria-bathra"
+        },
+        {
+          "label": "Δήμος Σαμοθράκης — καταγραφή μονοπατιών",
+          "url": "https://samothraki.gr/2017/06/01/"
+        }
+      ],
+      "documentation_status": "limited",
+      "documentation_tier": "Περιφερειακή + δημοτική πηγή",
+      "documentation_note": "Δύο επίσημες σελίδες περιγράφουν το σημείο, αλλά καμία δεν δίνει ύψος. Η χάραξη πρόσβασης χρειάζεται τοπική επιβεβαίωση.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q123279134",
+      "live_administration": true
+    },
+    {
+      "qid": "Q123280515",
+      "slug": "mylonas",
+      "name": "Καταρράκτης Μυλωνά",
+      "regional_unit": "Λασιθίου",
+      "region": "Κρήτη",
+      "region_qid": "Q1267522",
+      "height_m": 20.0,
+      "height_approximate": false,
+      "height_note": "Η τιμή που δημοσιεύει ο Δήμος Ιεραπέτρας για τον καταρράκτη στο φαράγγι Μυλωνά.",
+      "landscape": "Καταρράκτης σε φαράγγι της ανατολικής Κρήτης",
+      "access_code": "Α",
+      "access_text": "Πεζό τμήμα περίπου 20 λεπτών από την αφετηρία, με τοπική σήμανση.",
+      "activities": "Πεζοπορία φαραγγιού, θέαση, φωτογραφία",
+      "seasonality": "Χειμώνας και μετά από βροχές",
+      "seasonality_note": "Εντονότερο θέαμα τον χειμώνα· επιλέξτε ημέρα με βάση τον καιρό.",
+      "latitude": 35.03585,
+      "longitude": 25.84487,
+      "sources": [
+        {
+          "label": "Δήμος Ιεραπέτρας — Φαράγγι Μυλωνά",
+          "url": "https://www.ierapetra.gr/index.php/en/nature/143-mylonas-canyon"
+        },
+        {
+          "label": "Incredible Crete — Φαράγγι Μυλωνά",
+          "url": "https://www.incrediblecrete.gr/place/gorge-of-mylonas/"
+        }
+      ],
+      "documentation_status": "full",
+      "documentation_tier": "Δημοτική + περιφερειακή πηγή",
+      "documentation_note": "Το ύψος των 20 μ. προέρχεται από τον Δήμο Ιεραπέτρας και η πορεία από την Περιφέρεια Κρήτης. Δύο ανεξάρτητες επίσημες πηγές, χωρίς επιστημονική μελέτη.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q123280515",
+      "live_administration": true
+    },
+    {
+      "qid": "Q134572270",
+      "slug": "valanaris",
+      "name": "Καταρράκτης Βαλανάρη",
+      "regional_unit": "Ανατολικής Αττικής",
+      "region": "Αττική",
+      "region_qid": "Q758056",
+      "height_m": 6.0,
+      "height_approximate": false,
+      "height_note": "Το ύψος που αναφέρει ο Δήμος Ραφήνας–Πικερμίου.",
+      "landscape": "Καταρράκτης στο ρέμα Βαλανάρη, στο Ντράφι",
+      "access_code": "Γ",
+      "access_text": "Επιβεβαιώστε το επιτρεπόμενο σημείο καθόδου στο ρέμα· η πινέζα δεν είναι χώρος στάθμευσης.",
+      "activities": "Σύντομη πεζοπορία, θέαση, φωτογραφία",
+      "seasonality": "Όλο τον χρόνο",
+      "seasonality_note": "Νερό όλο τον χρόνο· σε έντονη βροχόπτωση το ρέμα γίνεται χείμαρρος.",
+      "latitude": 38.036862,
+      "longitude": 23.906229,
+      "sources": [
+        {
+          "label": "Δήμος Ραφήνας–Πικερμίου — Βαλανάρης",
+          "url": "https://rafina-pikermi.gr/istorika-laografika-mnimeia-pikermioy/"
+        }
+      ],
+      "documentation_status": "limited",
+      "documentation_tier": "Δημοτική πηγή",
+      "documentation_note": "Μία δημοτική πηγή τεκμηριώνει το ύψος των 6 μ. Δεν υπάρχει δεύτερη μέτρηση ή λήμμα Wikipedia· η πρόσβαση απαιτεί τοπική επιβεβαίωση.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q134572270",
+      "live_administration": false
+    },
+    {
+      "qid": "Q134580916",
+      "slug": "pythara",
+      "name": "Καταρράκτες Πυθάρας",
+      "regional_unit": "Άνδρου",
+      "region": "Νότιο Αιγαίο",
+      "region_qid": "Q173616",
+      "height_m": null,
+      "height_approximate": false,
+      "height_note": "Ο Δήμος Άνδρου περιγράφει μικρούς καταρράκτες χωρίς αριθμητικό ύψος πτώσης.",
+      "landscape": "Καταπράσινη ρεματιά με μικρούς καταρράκτες και λιμνούλες",
+      "access_code": "Α",
+      "access_text": "Πεζοπορία περίπου 10 λεπτών από τον κεντρικό δρόμο των Αποικίων.",
+      "activities": "Πεζοπορία, θέαση, φωτογραφία",
+      "seasonality": "Χωρίς ορισμένο μήνα",
+      "seasonality_note": "Έλεγχος της τρέχουσας κατάστασης του μονοπατιού.",
+      "latitude": 37.844561,
+      "longitude": 24.90286,
+      "sources": [
+        {
+          "label": "Δήμος Άνδρου — Πυθάρα",
+          "url": "https://andros.gr/gr/component/content/article.html?id=51:axiotheata"
+        }
+      ],
+      "documentation_status": "limited",
+      "documentation_tier": "Δημοτική πηγή",
+      "documentation_note": "Μία δημοτική πηγή χωρίς αριθμητικό ύψος. Η πρόσβαση περιγράφεται σε 10′, αλλά η κατάσταση του μονοπατιού δεν πιστοποιείται.",
+      "has_scientific_study": false,
+      "live_height_qid": "Q134580916",
+      "live_administration": true
+    }
+  ]
+}
