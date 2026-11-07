@@ -6,7 +6,8 @@ permalink: /katarraktes/edessa/
 order: 1
 area: "Πέλλα"
 description: "Ο Κάρανος και οι καταρράκτες της Έδεσσας με θέσεις θέασης, διευκρινίσεις πρόσβασης και πηγές."
-image: /assets/images/edessa.jpg
+image: >-
+  (https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg)
 ---
 
 ## Τι θα δείτε
