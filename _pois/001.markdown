@@ -7,7 +7,7 @@ order: 1
 area: "Πέλλα"
 description: "Ο Κάρανος και οι καταρράκτες της Έδεσσας με θέσεις θέασης, διευκρινίσεις πρόσβασης και πηγές."
 image: >-
-  https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg?width=960
+  https://commons.wikimedia.org/wiki/File:Edessa_waterfalls.jpg
 ---
 
 ## Τι θα δείτε
