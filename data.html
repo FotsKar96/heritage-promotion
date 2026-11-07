@@ -378,8 +378,10 @@ description: "Πίνακας, πρότυπη δομή 12 πεδίων και β�
     </div>
     <p class="dp-table-status" id="dp-table-status" role="status" aria-live="polite" aria-atomic="true">10 σημεία στον πίνακα.</p>
   </div>
-  <div class="dp-table-wrap">
-    <table class="dp-table" id="dp-table">
+    <p class="dp-note" id="dp-live-status" role="status" aria-live="polite">
+    Οι καταχωρίσεις εμφανίζονται με τα αποθηκευμένα στοιχεία μέχρι να ολοκληρωθεί η ενημέρωση των δεδομένων.
+  </p>
+      <table class="dp-table" id="dp-table" data-live-data-url="{{ '/assets/data/waterfalls.json' | relative_url }}">
       <caption class="dp-visually-hidden">Συγκριτικός πίνακας των δέκα σημείων</caption>
       <thead><tr><th scope="col" aria-sort="none"><button type="button" data-sort="name" data-type="text">Όνομα<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="pe" data-type="text">Περιφερειακή ενότητα<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="height" data-type="num">Ύψος<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="access" data-type="text">Πρόσβαση<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="activities" data-type="text">Δραστηριότητες<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="season" data-type="text">Εποχικότητα<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="qid" data-type="text">QID<span class="dp-arrow" aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" data-sort="sources" data-type="num">Πηγές<span class="dp-arrow" aria-hidden="true">↕</span></button></th></tr></thead>
       <tbody><tr data-slug="edessa" data-name="Καταρράκτες Έδεσσας" data-pe="Πέλλας" data-height="70" data-access="Α" data-region="Κεντρική Μακεδονία" data-season="Όλο τον χρόνο" data-activities="Θέαση Κάρανου, φωτογραφία, περιήγηση πάρκου" data-qid="Q50809609" data-sources="1" data-status="full" data-lat="40.803464" data-lon="22.055301">
@@ -1087,22 +1089,28 @@ description: "Πίνακας, πρότυπη δομή 12 πεδίων και β�
     return text.replace(/ς/g, "σ").toLowerCase();
   }
 
-  var haystacks = rows.map(function (row) {
-    var heightCell = row.querySelector(".dp-td-height strong");
-    var sourceLink = row.querySelector(".dp-td-src a, .dp-src a");
-    return normalize([
-      row.getAttribute("data-name"),
-      row.getAttribute("data-pe"),
-      row.getAttribute("data-region"),
-      row.getAttribute("data-access"),
-      row.getAttribute("data-season"),
-      row.getAttribute("data-activities"),
-      row.getAttribute("data-qid"),
-      row.getAttribute("data-height"),
-      heightCell ? heightCell.textContent : "",
-      sourceLink ? sourceLink.textContent : ""
-    ].join(" "));
-  });
+   function buildHaystacks() {
+    return rows.map(function (row) {
+      var heightCell = row.querySelector(".dp-td-height strong");
+      var sourceLink = row.querySelector(".dp-td-src a, .dp-src a");
+
+      return normalize([
+        row.getAttribute("data-name"),
+        row.getAttribute("data-search-aliases"),
+        row.getAttribute("data-pe"),
+        row.getAttribute("data-region"),
+        row.getAttribute("data-access"),
+        row.getAttribute("data-season"),
+        row.getAttribute("data-activities"),
+        row.getAttribute("data-qid"),
+        row.getAttribute("data-height"),
+        heightCell ? heightCell.textContent : "",
+        sourceLink ? sourceLink.textContent : ""
+      ].join(" "));
+    });
+  }
+
+  var haystacks = buildHaystacks();
 
   function matchesSearch(row) {
     if (!query) return true;
@@ -1175,7 +1183,14 @@ description: "Πίνακας, πρότυπη δομή 12 πεδίων και β�
     if (card && card.tagName === "DETAILS") card.open = true;
   });
 
+  document.addEventListener("waterfall-data-updated", function () {
+    haystacks = buildHaystacks();
+    applySort();
+  });
+
   updateSortUI();
   applyTable();
 })();
 </script>
+
+<script src="{{ '/assets/js/waterfall-data.js' | relative_url }}" defer></script>
