@@ -22,6 +22,8 @@ image: >-
 ## Η περιήγηση στο πάρκο
 Η περιγραφή της πρόσβασης ξεκινά από το Πάρκο Καταρρακτών, κοντά στο παρεκκλήσι της Αναλήψεως, και συνεχίζει με σκάλες προς χαμηλότερα επίπεδα. Προγραμματίστε τόσο την κατάβαση όσο και την επιστροφή.
 
+{% include waterfall-video.html id="cvNg62zt0zA" author="BJ4FUN" %}
+
 ## Πηγές και εικόνα
 - [Αφετηρία τοπικής ή επίσημης τεκμηρίωσης](https://visitedessa.gr/en/sights/52/1-areas-of-special-environmental-significance/64/karanos-waterfall)
 - [Wikidata](https://www.wikidata.org/wiki/Q50809609)
